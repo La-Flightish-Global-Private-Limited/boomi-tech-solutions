@@ -1,6 +1,8 @@
 // Content Configuration - Admin Configurable
 // Update these values to customize all website content without touching component code
 
+import { caseStudies as detailedCaseStudies } from './case-studies-data'
+
 export const contentConfig = {
   // Hero Section
   hero: {
@@ -296,3 +298,6 @@ export const contentConfig = {
     secondaryText: "Or call us at",
   },
 }
+
+// Export detailed case studies for dedicated case studies page
+export { detailedCaseStudies }

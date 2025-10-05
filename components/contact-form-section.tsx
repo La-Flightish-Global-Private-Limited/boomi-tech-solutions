@@ -49,10 +49,12 @@ export function ContactFormSection() {
       })
 
       if (response.ok) {
+        const userName = data.name as string
+        const firstName = userName.split(' ')[0]
         setIsSuccess(true)
         toast({
-          title: "Message Sent Successfully!",
-          description: "We'll get back to you within 24 hours.",
+          title: `Thank you, ${firstName}! 🎉`,
+          description: "Your message has been received. Our team will reach out to you within 24 hours to discuss your project.",
         })
         // Reset form
         e.currentTarget.reset()
@@ -136,9 +138,12 @@ export function ContactFormSection() {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 shrink-0 text-primary" />
                   <div>
-                    <h4 className="font-semibold text-primary">Thank you for reaching out!</h4>
+                    <h4 className="font-semibold text-primary">We're excited to work with you! 🚀</h4>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      We've received your message and will respond within 24 hours.
+                      Your inquiry has been received. One of our technology experts will reach out within 24 hours to discuss how we can help transform your business.
+                    </p>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      In the meantime, feel free to explore our <a href="/services" className="text-primary hover:underline">services</a> or check out our success stories.
                     </p>
                   </div>
                 </div>

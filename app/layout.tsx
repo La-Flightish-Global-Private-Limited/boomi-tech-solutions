@@ -2,8 +2,8 @@ import type React from "react"
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
-import { Analytics as VercelAnalytics } from "@vercel/analytics/next"
 import { Analytics } from "@/components/analytics"
+import { Toaster } from "@/components/ui/toaster"
 import "./globals.css"
 import { Suspense } from "react"
 import { seoConfig } from "@/lib/seo-config"
@@ -61,8 +61,8 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+        <Toaster />
         <Analytics />
-        <VercelAnalytics />
       </body>
     </html>
   )

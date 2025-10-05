@@ -22,7 +22,7 @@ export async function sendContactEmail(data: {
       body: JSON.stringify({
         from: process.env.EMAIL_FROM || 'contact@boomitech.com',
         to: process.env.EMAIL_TO || 'admin@boomitech.com',
-        subject: `New Contact Form Submission - ${data.service}`,
+        subject: `Boomi Tech Form - New Contact Form Submission - ${data.service}`,
         html: `
           <h2>New Contact Form Submission</h2>
           <p><strong>Name:</strong> ${data.name}</p>

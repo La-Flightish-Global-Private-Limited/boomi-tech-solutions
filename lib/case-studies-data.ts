@@ -5,7 +5,7 @@ export const caseStudies = [
     industry: "Logistics & Supply Chain",
     client: "Fortune 100 Logistics Corporation",
     duration: "14 months",
-    image: "/modern-technology-architecture-black-and-white.jpg",
+    image: "/abstract-technology-network-digital-innovation.jpg",
     tags: ["AI/ML", "Cloud Infrastructure", "Real-time Analytics"],
     
     challenge: {
@@ -60,7 +60,7 @@ export const caseStudies = [
     industry: "Healthcare Technology",
     client: "National Healthcare Network",
     duration: "18 months",
-    image: "/healthcare-ai-interface.jpg",
+    image: "/modern-office-workspace-innovation.jpg",
     tags: ["HIPAA Compliance", "AI Diagnostics", "Telemedicine"],
     
     challenge: {
@@ -172,7 +172,7 @@ export const caseStudies = [
     industry: "Manufacturing",
     client: "Fortune 500 Automotive Manufacturer",
     duration: "16 months",
-    image: "/professional-technology-team-collaboration-modern-.jpg",
+    image: "/modern-technology-architecture-black-and-white.jpg",
     tags: ["IoT", "Predictive Maintenance", "Industry 4.0"],
     
     challenge: {
@@ -229,7 +229,7 @@ export const caseStudies = [
     industry: "Education Technology",
     client: "International Education Foundation",
     duration: "20 months",
-    image: "/professional-technology-team-collaboration.jpg",
+    image: "/team-collaboration-modern-office-black-and-white.jpg",
     tags: ["EdTech", "AI Personalization", "Global Scale"],
     
     challenge: {
@@ -286,7 +286,7 @@ export const caseStudies = [
     industry: "Climate Technology",
     client: "Global Sustainability Consortium",
     duration: "12 months",
-    image: "/abstract-technology-network-digital-innovation.jpg",
+    image: "/business-handshake-partnership-black-and-white.jpg",
     tags: ["Climate Tech", "Blockchain", "ESG Compliance"],
     
     challenge: {

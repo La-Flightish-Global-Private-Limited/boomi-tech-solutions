@@ -2,8 +2,10 @@
 
 import type React from "react"
 import Link from "next/link"
-
 import { useState } from "react"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import * as z from "zod"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -14,64 +16,65 @@ import { Mail, MapPin, Phone, Send, CheckCircle2 } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 import { siteConfig, getFullAddress } from "@/lib/site-config"
 
+const contactSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  phone: z.string().optional(),
+  company: z.string().optional(),
+  service: z.string().min(1, "Please select a service"),
+  budget: z.string().optional(),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+  newsletter: z.boolean().optional(),
+})
+
+type ContactForm = z.infer<typeof contactSchema>
+
 export function ContactFormSection() {
   const { toast } = useToast()
-  const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-  const [errorMessage, setErrorMessage] = useState("")
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+    setValue,
+    watch,
+  } = useForm<ContactForm>({
+    resolver: zodResolver(contactSchema),
+  })
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    // Get form data
-    const formData = new FormData(e.currentTarget)
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      company: formData.get("company"),
-      service: formData.get("service"),
-      budget: formData.get("budget"),
-      message: formData.get("message"),
-      newsletter: formData.get("newsletter") === "on",
-      timestamp: new Date().toISOString(),
-    }
-
+  const onSubmit = async (data: ContactForm) => {
     try {
-      // Call the API route to handle form submission
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          timestamp: new Date().toISOString(),
+        }),
       })
 
       if (response.ok) {
-        const userName = data.name as string
-        const firstName = userName.split(' ')[0]
+        const firstName = data.name.split(' ')[0]
         setIsSuccess(true)
         toast({
           title: `Thank you, ${firstName}! 🎉`,
           description: "Your message has been received. Our team will reach out to you within 24 hours to discuss your project.",
         })
-        // Reset form
-        e.currentTarget.reset()
+        reset()
       } else {
         const errorData = await response.json()
         throw new Error(errorData.error || "Failed to send message")
       }
     } catch (error) {
       const message = error instanceof Error ? error.message : "Failed to send message. Please try again or email us directly."
-      setErrorMessage(message)
       toast({
         title: "Error",
         description: message,
         variant: "destructive",
       })
-    } finally {
-      setIsSubmitting(false)
     }
   }
 
@@ -152,17 +155,28 @@ export function ContactFormSection() {
           </div>
 
           {/* Right Column - Form */}
-          <div className="rounded-2xl border border-border/40 bg-card p-8">
-            <div role="status" aria-live="polite" className="sr-only">
-              {errorMessage}
+          <div className="relative rounded-2xl border-2 border-blue-200 bg-gradient-to-br from-blue-50/50 to-white p-8 shadow-xl">
+            <div className="absolute -top-4 left-6">
+              <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                🚀 Start Your Project Today
+              </span>
             </div>
-            <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
+            <div className="absolute top-4 right-4">
+              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+            </div>
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" aria-label="Contact form">
               {/* Name */}
               <div className="space-y-2">
                 <Label htmlFor="name">
                   Full Name <span className="text-destructive">*</span>
                 </Label>
-                <Input id="name" name="name" placeholder="John Doe" required />
+                <Input 
+                  id="name" 
+                  placeholder="John Doe" 
+                  className="border border-gray-300 focus:border-primary" 
+                  {...register("name")}
+                />
+                {errors.name && <p className="text-sm text-red-600">{errors.name.message}</p>}
               </div>
 
               {/* Email */}
@@ -170,19 +184,26 @@ export function ContactFormSection() {
                 <Label htmlFor="email">
                   Email Address <span className="text-destructive">*</span>
                 </Label>
-                <Input id="email" name="email" type="email" placeholder="john@company.com" required />
+                <Input 
+                  id="email" 
+                  type="email" 
+                  placeholder="john@company.com" 
+                  className="border border-gray-300 focus:border-primary" 
+                  {...register("email")}
+                />
+                {errors.email && <p className="text-sm text-red-600">{errors.email.message}</p>}
               </div>
 
               {/* Phone */}
               <div className="space-y-2">
                 <Label htmlFor="phone">Phone Number</Label>
-                <Input id="phone" name="phone" type="tel" placeholder="+1 (555) 123-4567" />
+                <Input id="phone" name="phone" type="tel" placeholder="+1 (555) 123-4567" className="border border-gray-300 focus:border-primary" />
               </div>
 
               {/* Company */}
               <div className="space-y-2">
                 <Label htmlFor="company">Company Name</Label>
-                <Input id="company" name="company" placeholder="Your Company Inc." />
+                <Input id="company" name="company" placeholder="Your Company Inc." className="border border-gray-300 focus:border-primary" />
               </div>
 
               {/* Service Interest */}
@@ -191,7 +212,7 @@ export function ContactFormSection() {
                   Service Interest <span className="text-destructive">*</span>
                 </Label>
                 <Select name="service" required>
-                  <SelectTrigger id="service">
+                  <SelectTrigger id="service" className="border border-gray-300 focus:border-primary">
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
                   <SelectContent>
@@ -213,7 +234,7 @@ export function ContactFormSection() {
               <div className="space-y-2">
                 <Label htmlFor="budget">Project Budget</Label>
                 <Select name="budget">
-                  <SelectTrigger id="budget">
+                  <SelectTrigger id="budget" className="border border-gray-300 focus:border-primary">
                     <SelectValue placeholder="Select budget range" />
                   </SelectTrigger>
                   <SelectContent>
@@ -234,17 +255,18 @@ export function ContactFormSection() {
                 </Label>
                 <Textarea
                   id="message"
-                  name="message"
                   placeholder="Tell us about your project, goals, and timeline..."
                   rows={5}
-                  required
+                  className="border border-gray-300 focus:border-primary"
+                  {...register("message")}
                 />
+                {errors.message && <p className="text-sm text-red-600">{errors.message.message}</p>}
               </div>
 
               {/* Newsletter */}
               <div className="flex items-start gap-2">
-                <Checkbox id="newsletter" name="newsletter" />
-                <Label htmlFor="newsletter" className="text-sm font-normal leading-relaxed text-muted-foreground">
+                <Checkbox id="newsletter" name="newsletter" className="border border-gray-300" />
+                <Label htmlFor="newsletter" className="text-sm font-normal leading-relaxed text-gray-600 cursor-pointer">
                   I'd like to receive updates about new services, case studies, and technology insights.
                 </Label>
               </div>
@@ -253,7 +275,7 @@ export function ContactFormSection() {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
@@ -281,6 +303,13 @@ export function ContactFormSection() {
                 .
               </p>
             </form>
+            
+            <div className="mt-6 text-center">
+              <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <span>Free consultation • No commitment • 24h response</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -112,51 +112,7 @@ export const contentConfig = {
     },
   ],
 
-  // Case Studies
-  caseStudies: [
-    {
-      title: "FinTech Platform Modernization",
-      industry: "Financial Services",
-      challenge: "Legacy mainframe system causing bottlenecks and limiting innovation",
-      solution: "Migrated to cloud-native microservices architecture with AI-powered fraud detection",
-      results: [
-        "60% faster time-to-market",
-        "99.99% uptime achieved",
-        "$2M annual cost savings",
-        "10x improvement in transaction processing",
-      ],
-      technologies: ["AWS", "Kubernetes", "Python", "TensorFlow", "PostgreSQL"],
-      image: "/modern-fintech-dashboard.png",
-    },
-    {
-      title: "Healthcare AI Assistant",
-      industry: "Healthcare",
-      challenge: "Manual patient data processing causing delays and errors",
-      solution: "Custom AI agent for automated patient intake and data processing",
-      results: [
-        "85% reduction in processing time",
-        "99.2% accuracy rate",
-        "500+ hours saved monthly",
-        "Improved patient satisfaction by 45%",
-      ],
-      technologies: ["OpenAI", "Next.js", "Node.js", "MongoDB", "HIPAA Compliance"],
-      image: "/healthcare-ai-interface.jpg",
-    },
-    {
-      title: "E-Commerce SAAS Platform",
-      industry: "Retail Technology",
-      challenge: "Need for scalable multi-tenant e-commerce solution",
-      solution: "Built enterprise SAAS platform with AI-powered recommendations",
-      results: [
-        "Scaled to 10,000+ merchants",
-        "35% increase in conversion rates",
-        "Processing $50M+ monthly GMV",
-        "Series A funding secured",
-      ],
-      technologies: ["Next.js", "Stripe", "Redis", "PostgreSQL", "Vercel"],
-      image: "/ecommerce-saas-platform.jpg",
-    },
-  ],
+  // Case Studies - Using detailed case studies from case-studies-data.ts
 
   // Company Stats
   stats: [

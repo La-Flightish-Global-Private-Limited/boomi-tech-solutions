@@ -2,8 +2,9 @@
 
 import { contentConfig } from "@/lib/content-config"
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Play, Eye } from "lucide-react"
 import { useEffect, useState } from "react"
+import Link from "next/link"
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -28,20 +29,35 @@ export function HeroSection() {
         <div
           className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-400 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
         >
-          <Button
-            size="lg"
-            className="bg-foreground text-background hover:bg-foreground/90 text-base px-8 py-6 rounded-full font-medium shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-lg"
-          >
-            {contentConfig.hero.ctaText}
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-          </Button>
-          <Button
-            size="lg"
-            variant="ghost"
-            className="text-foreground hover:bg-muted text-base px-8 py-6 rounded-full font-medium transition-all duration-300 hover:scale-105"
-          >
-            {contentConfig.hero.secondaryCtaText}
-          </Button>
+          <Link href={contentConfig.hero.ctaLink}>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 text-base px-8 py-6 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <Play className="mr-2 h-5 w-5" />
+              {contentConfig.hero.ctaText}
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+          </Link>
+          <Link href={contentConfig.hero.secondaryCtaLink}>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 text-base px-8 py-6 rounded-full font-medium transition-all duration-300 hover:scale-105 bg-white/90 backdrop-blur-sm"
+            >
+              <Eye className="mr-2 h-5 w-5" />
+              {contentConfig.hero.secondaryCtaText}
+            </Button>
+          </Link>
+          <Link href="#contact">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-green-500 text-green-600 hover:bg-green-50 hover:border-green-600 text-base px-8 py-6 rounded-full font-medium transition-all duration-300 hover:scale-105 bg-white/90 backdrop-blur-sm"
+            >
+              🚀 Startup Consultation
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

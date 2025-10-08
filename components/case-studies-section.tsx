@@ -1,6 +1,6 @@
 "use client"
 
-import { detailedCaseStudies } from "@/lib/content-config"
+import { caseStudies as detailedCaseStudies } from "@/lib/case-studies-data-new"
 import Image from "next/image"
 import { useState } from "react"
 import { ExternalLink, Clock, Users, TrendingUp } from "lucide-react"

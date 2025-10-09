@@ -54,7 +54,7 @@ export function TrustIndicators() {
             }
           `}</style>
           <p className="text-sm text-gray-500">
-            Join <span className="font-semibold text-gray-700">50+</span> companies that trust us with their technology needs
+            <span className="font-semibold text-gray-700">Delivering results for forward-thinking companies</span>
           </p>
         </div>
       </div>

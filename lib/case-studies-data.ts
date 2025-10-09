@@ -1,564 +1,537 @@
 export const caseStudies = [
   {
     id: 1,
-    title: "Regional Logistics Company Improves Delivery Efficiency",
-    industry: "Logistics & Supply Chain",
-    client: "Regional Logistics Company",
-    duration: "14 months",
+    title: "Local Delivery Service Cuts Route Planning Time",
+    industry: "Logistics",
+    client: "Local Delivery Service",
+    duration: "5 months",
     image: "/abstract-technology-network-digital-innovation.jpg",
     tags: ["AI/ML", "Cloud Infrastructure", "Real-time Analytics"],
     
     challenge: {
-      title: "Manual Route Planning Causing Delays and Extra Costs",
-      description: "A regional logistics company with 50 trucks was struggling with manual route planning and paper-based tracking. Drivers were taking inefficient routes, and dispatchers had no real-time visibility into deliveries.",
+      title: "Manual Route Planning Wasting Time Daily",
+      description: "A local delivery service with 8 drivers was planning routes manually each morning. The owner spent 90 minutes daily figuring out the best routes, and drivers often got lost or took wrong turns.",
       painPoints: [
-        "30% of deliveries running late",
-        "Manual route planning taking 2 hours daily",
-        "Extra fuel costs from inefficient routes",
-        "Customer complaints increasing",
-        "No real-time tracking for customers",
-        "Difficulty scaling operations"
+        "Owner spending 90 minutes daily on route planning",
+        "Drivers getting lost or taking wrong routes",
+        "Customers calling asking where their delivery is",
+        "No way to prove delivery times",
+        "Wasting fuel on inefficient routes"
       ]
     },
     
     solution: {
-      title: "Simple Route Optimization and Tracking System",
-      description: "We built a web-based route optimization tool that automatically plans efficient routes and provides real-time GPS tracking. Dispatchers can now see all trucks on a map and customers get delivery updates.",
+      title: "Simple Route Planning Tool",
+      description: "We built a basic web app that takes the day's addresses and creates optimized routes. Drivers use their phones to follow the route and mark deliveries complete. Customers get a text when their delivery is nearby.",
       approach: [
-        "Built route optimization using Google Maps API",
-        "Created dispatcher dashboard with real-time truck locations",
-        "Added customer tracking portal",
-        "Integrated with existing dispatch software",
-        "Set up automated SMS notifications",
-        "Deployed on cloud for easy access"
+        "Built route optimizer using Google Maps API",
+        "Created mobile-friendly driver interface",
+        "Added simple SMS notifications via Twilio",
+        "Made it work on any smartphone browser"
       ],
-      technologies: ["React", "Node.js", "Google Maps API", "PostgreSQL", "Heroku"]
+      technologies: ["React", "Node.js", "Google Maps API", "Twilio", "Heroku"]
     },
     
     results: {
       metrics: [
-        { label: "On-Time Delivery", value: "92%", impact: "From 70% baseline" },
-        { label: "Route Planning Time", value: "15 minutes", impact: "From 2 hours daily" },
-        { label: "Fuel Savings", value: "18%", impact: "Saving ~$2K/month" },
-        { label: "Customer Complaints", value: "60% reduction", impact: "Better communication" },
-        { label: "Project Cost", value: "$28K", impact: "6-month timeline" },
-        { label: "Monthly Hosting", value: "$150", impact: "Affordable to maintain" }
+        { label: "Route Planning Time", value: "10 minutes", impact: "From 90 minutes daily" },
+        { label: "Deliveries Per Day", value: "32", impact: "From 24 average" },
+        { label: "Fuel Savings", value: "~$400/month", impact: "Better routes" },
+        { label: "Customer Calls", value: "Way less", impact: "They get text updates" },
+        { label: "Project Cost", value: "$8,500", impact: "Paid in 3 months" },
+        { label: "Monthly Cost", value: "$65", impact: "Hosting + SMS" }
       ],
       testimonial: {
-        quote: "We can finally see where all our trucks are in real-time. Route planning that used to take 2 hours now takes 15 minutes. Our drivers love it and customers are happier.",
-        author: "Operations Manager",
-        company: "Regional Logistics Company"
+        quote: "This tool saves me over an hour every morning. My drivers know exactly where to go, and customers love getting text updates. Best money I've spent on the business.",
+        author: "Owner",
+        company: "Local Delivery Service"
       }
     },
     
-    globalImpact: "This shows how small logistics companies can modernize operations affordably. The company has since expanded from 50 to 75 trucks using the same system."
+    globalImpact: "The business has grown from 8 to 12 drivers since launching the tool. They're now handling 50% more deliveries with the same level of stress."
   },
 
   {
     id: 2,
-    title: "Local Clinic Launches Telemedicine for Rural Patients",
-    industry: "Healthcare Technology",
-    client: "Regional Healthcare Clinic",
-    duration: "18 months",
+    title: "Family Doctor Adds Video Appointments",
+    industry: "Healthcare",
+    client: "Family Medical Practice",
+    duration: "3 months",
     image: "/modern-office-workspace-innovation.jpg",
     tags: ["HIPAA Compliance", "AI Diagnostics", "Telemedicine"],
     
     challenge: {
-      title: "Rural Patients Traveling 2+ Hours for Appointments",
-      description: "A regional clinic with 8 doctors wanted to serve rural patients who had to drive 2+ hours for appointments. Many patients were skipping follow-ups due to travel time and costs.",
+      title: "Patients Wanted Video Appointments During COVID",
+      description: "A family doctor with 2 physicians wanted to offer video appointments but didn't know where to start. They were losing patients to larger practices that had telehealth options.",
       painPoints: [
-        "Patients driving 2+ hours each way",
-        "30% of patients missing follow-up appointments",
-        "No way to do virtual consultations",
-        "Doctors spending evenings on phone calls",
-        "Limited appointment slots available",
-        "Needed HIPAA-compliant video solution"
+        "Patients asking for video appointments",
+        "Losing patients to bigger clinics with telehealth",
+        "Needed HIPAA-compliant solution",
+        "Receptionist overwhelmed with scheduling",
+        "No online booking available"
       ]
     },
     
     solution: {
-      title: "Simple Video Consultation Platform",
-      description: "We built a HIPAA-compliant video consultation platform that lets patients book and attend appointments from home. Doctors can review records, prescribe medications, and schedule follow-ups all in one system.",
+      title: "Simple Video Appointment System",
+      description: "We set up a basic HIPAA-compliant video system using Doxy.me and built a simple booking page. Patients can book video or in-person appointments online, and get reminder texts.",
       approach: [
-        "Integrated Twilio Video for HIPAA-compliant calls",
-        "Built appointment booking system",
-        "Created patient portal for medical records",
-        "Added e-prescription integration",
-        "Set up automated appointment reminders",
-        "Made it mobile-friendly for patients"
+        "Integrated Doxy.me for HIPAA-compliant video",
+        "Built simple online booking calendar",
+        "Added automated SMS reminders",
+        "Created patient instructions page"
       ],
-      technologies: ["React", "Node.js", "Twilio Video", "PostgreSQL", "Stripe"]
+      technologies: ["Next.js", "Doxy.me", "Calendly API", "Twilio"]
     },
     
     results: {
       metrics: [
-        { label: "Virtual Visits", value: "1,200+", impact: "In first 6 months" },
-        { label: "Patient No-Shows", value: "75% reduction", impact: "Much more convenient" },
-        { label: "Doctor Efficiency", value: "5 more patients/day", impact: "No travel time" },
-        { label: "Patient Satisfaction", value: "4.6/5", impact: "Love the convenience" },
-        { label: "Project Cost", value: "$22K", impact: "4-month timeline" },
-        { label: "Monthly Cost", value: "$180", impact: "Twilio + hosting" }
+        { label: "Video Visits", value: "15-20/week", impact: "Started from zero" },
+        { label: "No-Shows", value: "Down to 5%", impact: "From 20% before" },
+        { label: "Online Bookings", value: "60%", impact: "Less phone time" },
+        { label: "Patient Feedback", value: "Really positive", impact: "Love the convenience" },
+        { label: "Project Cost", value: "$6,800", impact: "Done in 6 weeks" },
+        { label: "Monthly Cost", value: "$45", impact: "Very affordable" }
       ],
       testimonial: {
-        quote: "Our rural patients love this. They can see their doctor from home instead of driving 2 hours. We're doing 20-30 video visits per day now and patients are actually keeping their follow-up appointments.",
-        author: "Clinic Director",
-        company: "Regional Healthcare Clinic"
+        quote: "We were worried telehealth would be complicated and expensive, but this was easy to set up. Our patients love it, especially for follow-ups and minor issues. Wish we'd done this sooner.",
+        author: "Dr. Sarah Chen",
+        company: "Family Medical Practice"
       }
     },
     
-    globalImpact: "This shows how small clinics can offer telemedicine affordably. Two other clinics in the area have asked about implementing similar systems."
+    globalImpact: "The practice kept all their patients and even gained new ones who wanted telehealth options. They're now doing 15-20 video visits weekly."
   },
 
   {
     id: 3,
-    title: "Community Bank Modernizes Online Banking",
-    industry: "Financial Services",
-    client: "Community Bank",
-    duration: "22 months",
+    title: "Local Restaurant Chain Launches Online Ordering",
+    industry: "Food & Beverage",
+    client: "Regional Restaurant Chain",
+    duration: "3 months",
     image: "/modern-fintech-dashboard.png",
-    tags: ["Mainframe Modernization", "Cloud Migration", "Zero Downtime"],
+    tags: ["E-commerce", "Mobile App", "Payment Integration"],
     
     challenge: {
-      title: "40-Year-Old Mainframe Holding Back Innovation",
-      description: "A major international bank was trapped by legacy COBOL systems that cost $120M annually to maintain, couldn't support mobile banking, and took 18 months to add new features. Competitors were launching innovative products in weeks while they were stuck in the past.",
+      title: "Tired of Paying DoorDash 30% Commission",
+      description: "A pizza restaurant with 3 locations was paying huge commissions to DoorDash and UberEats. The owner wanted their own ordering website but thought it would cost $50K+.",
       painPoints: [
-        "$3M annual mainframe maintenance costs",
-        "18-month timeline for new feature deployment",
-        "Unable to support real-time transactions",
-        "Losing 2,000 customers monthly to digital-first banks",
-        "Security vulnerabilities in 40-year-old code",
-        "Compliance risks with outdated systems",
-        "Impossible to hire COBOL developers"
+        "Paying 30% commission on delivery orders",
+        "No customer emails or phone numbers",
+        "Customers complaining about delivery app fees",
+        "Wanted to offer loyalty rewards",
+        "Thought custom solution would be too expensive"
       ]
     },
     
     solution: {
-      title: "Phased Cloud Migration with Zero Downtime",
-      description: "We executed a sophisticated migration strategy that moved 40 years of banking operations to a modern cloud infrastructure without a single minute of downtime, while simultaneously rebuilding core systems with modern architecture.",
+      title: "Simple Online Ordering Website",
+      description: "We built a straightforward ordering website where customers can order pickup or delivery. Integrated with Square for payments and added a basic points system for repeat customers.",
       approach: [
-        "Analyzed 15 million lines of COBOL code and created migration roadmap",
-        "Built cloud-native microservices architecture on AWS",
-        "Implemented strangler fig pattern for gradual migration",
-        "Created real-time data synchronization between old and new systems",
-        "Deployed comprehensive testing framework with 99.99% coverage",
-        "Trained 200+ staff on new systems and processes",
-        "Maintained dual-run for 6 months to ensure stability"
+        "Built mobile-friendly ordering site",
+        "Integrated Square for payments",
+        "Added simple loyalty points (10th pizza free)",
+        "Set up SMS order confirmations",
+        "Connected to their existing Square POS"
       ],
-      technologies: ["AWS", "Java", "Spring Boot", "Kafka", "PostgreSQL", "Redis", "Kubernetes"]
+      technologies: ["Next.js", "Square API", "Twilio", "Vercel"]
     },
     
     results: {
       metrics: [
-        { label: "Cost Reduction", value: "$1.5M annually", impact: "50% decrease in IT costs" },
-        { label: "Feature Deployment", value: "2 weeks", impact: "From 18 months" },
-        { label: "Transaction Speed", value: "Real-time", impact: "From 24-hour batch processing" },
-        { label: "System Uptime", value: "99.99%", impact: "Zero downtime during migration" },
-        { label: "Customer Growth", value: "25,000 new", impact: "In 12 months post-migration" },
-        { label: "Mobile Adoption", value: "78%", impact: "New mobile banking platform" }
+        { label: "Direct Orders", value: "80-100/week", impact: "Started from zero" },
+        { label: "Commission Saved", value: "~$1,200/month", impact: "No more 30% fees" },
+        { label: "Repeat Customers", value: "Growing", impact: "Loyalty program working" },
+        { label: "Project Cost", value: "$9,500", impact: "Way less than expected" },
+        { label: "Monthly Cost", value: "$55", impact: "Hosting + SMS" },
+        { label: "ROI", value: "8 months", impact: "Already profitable" }
       ],
       testimonial: {
-        quote: "Boomi Tech achieved what three other consulting firms said was impossible. They migrated our entire banking infrastructure to the cloud without a single second of downtime. This transformation has positioned us to compete with digital-first banks.",
-        author: "Chief Technology Officer",
-        company: "Global Banking Institution"
+        quote: "I thought this would cost $50K. For under $10K we got our own ordering site and we're saving over a thousand bucks a month. Customers love ordering direct and getting rewards.",
+        author: "Tony M.",
+        company: "Tony's Pizza (3 locations)"
       }
     },
     
-    globalImpact: "This migration demonstrates that regional banks can successfully modernize without massive budgets. The methodology is being shared with other community banks facing similar mainframe challenges."
+    globalImpact: "The restaurant is now getting 80-100 direct orders weekly. They're planning to add catering orders to the site next."
   },
 
   {
     id: 4,
-    title: "Smart Manufacturing: IoT-Driven Production Optimization",
-    industry: "Manufacturing",
-    client: "Fortune 500 Automotive Manufacturer",
-    duration: "16 months",
+    title: "Fitness Studio Automates Class Bookings",
+    industry: "Health & Wellness",
+    client: "Local Fitness Studio",
+    duration: "2 months",
     image: "/modern-technology-architecture-black-and-white.jpg",
-    tags: ["IoT", "Predictive Maintenance", "Industry 4.0"],
+    tags: ["Booking System", "Automation", "Mobile-First"],
     
     challenge: {
-      title: "Unplanned Downtime Costing $2M Per Hour",
-      description: "A global automotive manufacturer faced catastrophic production losses due to unexpected equipment failures. With 12 factories worldwide, unplanned downtime was costing $2M per hour, and quality issues were leading to expensive recalls.",
+      title: "Manual Booking Process Causing Scheduling Chaos",
+      description: "A fitness studio with 3 instructors was managing class bookings through phone calls and a paper calendar. Double bookings were common, no-shows were at 35%, and staff spent hours on scheduling.",
       painPoints: [
-        "$5M annual loss from unplanned downtime",
-        "Equipment failures unpredictable and frequent",
-        "Quality defects discovered only after production",
-        "No real-time visibility across global factories",
-        "Manual inspections missing 23% of defects",
-        "Supply chain disruptions from production delays",
-        "Environmental waste from defective products"
+        "Double bookings happening weekly",
+        "35% no-show rate costing revenue",
+        "Staff spending 10+ hours/week on scheduling",
+        "No way to collect payments upfront",
+        "Customers frustrated with busy phone lines",
+        "No waitlist management"
       ]
     },
     
     solution: {
-      title: "AI-Powered Predictive Maintenance & Quality Control",
-      description: "We deployed an IoT ecosystem with 50,000+ sensors across 12 factories, combined with machine learning models that predict equipment failures 72 hours in advance and detect quality issues in real-time during production.",
+      title: "Automated Class Booking and Payment System",
+      description: "We built a simple booking platform where customers can see class schedules, book spots, and pay online. Automated reminders reduced no-shows, and the waitlist feature fills cancelled spots automatically.",
       approach: [
-        "Installed 50,000+ IoT sensors across production lines",
-        "Built edge computing infrastructure for real-time processing",
-        "Developed ML models for predictive maintenance using historical data",
-        "Created computer vision system for automated quality inspection",
-        "Implemented digital twin technology for production simulation",
-        "Built centralized dashboard for global factory monitoring",
-        "Integrated with existing ERP and supply chain systems"
+        "Built mobile-friendly booking interface",
+        "Integrated Stripe for upfront payments",
+        "Added automated SMS/email reminders",
+        "Created waitlist with auto-fill feature",
+        "Built instructor dashboard for class management",
+        "Added class packages and memberships"
       ],
-      technologies: ["AWS IoT", "Python", "TensorFlow", "OpenCV", "Kafka", "InfluxDB", "Grafana"]
+      technologies: ["Next.js", "Stripe", "Twilio", "PostgreSQL", "Vercel"]
     },
     
     results: {
       metrics: [
-        { label: "Downtime Reduction", value: "65%", impact: "Saving $3M annually" },
-        { label: "Prediction Accuracy", value: "94%", impact: "72-hour advance warning" },
-        { label: "Quality Defects", value: "91% reduction", impact: "From 2.3% to 0.2%" },
-        { label: "Maintenance Costs", value: "42% lower", impact: "Proactive vs reactive" },
-        { label: "Production Efficiency", value: "31% increase", impact: "Optimized workflows" },
-        { label: "Waste Reduction", value: "64%", impact: "Environmental impact" }
+        { label: "No-Show Rate", value: "Much better", impact: "From 35% to around 10%" },
+        { label: "Time Saved", value: "10+ hours/week", impact: "No more phone tag" },
+        { label: "Classes Filled", value: "Up 25%", impact: "Waitlist feature helps" },
+        { label: "Online Bookings", value: "90%+", impact: "People love it" },
+        { label: "Project Cost", value: "$7,200", impact: "Done in 8 weeks" },
+        { label: "Monthly Cost", value: "$48", impact: "Very affordable" }
       ],
       testimonial: {
-        quote: "The predictive maintenance system has transformed our operations. We now fix problems before they happen. The ROI was achieved in just 7 months, and we're expanding this to all our global facilities.",
-        author: "VP of Manufacturing Operations",
-        company: "Global Automotive Leader"
+        quote: "I was managing everything in a notebook and on my phone. This system is so much easier. No more double bookings, people pay when they book, and I get my evenings back.",
+        author: "Jessica R.",
+        company: "CoreFit Studio"
       }
     },
     
-    globalImpact: "This Industry 4.0 solution shows how manufacturers can implement predictive maintenance affordably. The approach is being adopted by other automotive suppliers in the region."
+    globalImpact: "The studio is now consistently filling classes and has added 2 more instructors. They're looking at opening a second location next year."
   },
 
   {
     id: 5,
-    title: "EdTech Platform Democratizing Education for 10M Students",
-    industry: "Education Technology",
-    client: "International Education Foundation",
-    duration: "20 months",
+    title: "Real Estate Agency Launches Property Portal",
+    industry: "Real Estate",
+    client: "Local Real Estate Agency",
+    duration: "4 months",
     image: "/team-collaboration-modern-office-black-and-white.jpg",
-    tags: ["EdTech", "AI Personalization", "Global Scale"],
+    tags: ["Property Management", "CRM", "Lead Generation"],
     
     challenge: {
-      title: "Education Inequality Affecting 800M Students Globally",
-      description: "An education foundation wanted to address the global learning crisis where 800 million students lack access to quality education. Traditional online learning had 78% dropout rates, and one-size-fits-all content wasn't working for diverse learners.",
+      title: "Losing Leads to Zillow and Realtor.com",
+      description: "A real estate agency with 12 agents was paying high fees to listing sites and losing leads to competitors. They had no online presence and were managing properties in spreadsheets.",
       painPoints: [
-        "65% dropout rate in online courses",
-        "No personalization for different learning styles",
-        "Language barriers for non-English speakers",
-        "Limited access in low-bandwidth regions",
-        "No way to track learning outcomes effectively",
-        "Teachers overwhelmed with 50+ students per class",
-        "Expensive content creation limiting course availability"
+        "Paying $800/month to listing sites",
+        "Leads going to competitors",
+        "No professional website",
+        "Managing properties in Excel spreadsheets",
+        "Agents manually following up with leads",
+        "No way to showcase virtual tours"
       ]
     },
     
     solution: {
-      title: "AI-Personalized Learning Platform with Offline Capabilities",
-      description: "We built a revolutionary learning platform that uses AI to personalize content for each student's learning style, works offline, supports 47 languages, and provides teachers with actionable insights to help struggling students.",
+      title: "Custom Property Portal with CRM",
+      description: "We built a property listing website with virtual tour integration, lead capture forms, and a simple CRM for agents to manage leads and follow-ups. The site is optimized for local SEO.",
       approach: [
-        "Developed adaptive learning algorithms that personalize content",
-        "Built progressive web app working offline in low-bandwidth areas",
-        "Implemented AI-powered translation for 47 languages",
-        "Created teacher dashboard with student progress analytics",
-        "Developed gamification system to increase engagement",
-        "Built content creation tools reducing production time by 80%",
-        "Deployed on global CDN for low-latency access worldwide"
+        "Built property listing site with search filters",
+        "Integrated Matterport for virtual tours",
+        "Created lead capture and distribution system",
+        "Built agent CRM for lead management",
+        "Optimized for local SEO",
+        "Added automated email follow-ups"
       ],
-      technologies: ["Next.js", "Python", "TensorFlow", "PostgreSQL", "Redis", "AWS", "WebAssembly"]
+      technologies: ["Next.js", "Sanity CMS", "Matterport API", "SendGrid", "Vercel"]
     },
     
     results: {
       metrics: [
-        { label: "Students Reached", value: "150K", impact: "Across 12 countries" },
-        { label: "Completion Rate", value: "68%", impact: "From 35% baseline" },
-        { label: "Learning Improvement", value: "67% faster", impact: "Compared to traditional methods" },
-        { label: "Teacher Efficiency", value: "5x increase", impact: "AI-assisted grading" },
-        { label: "Cost per Student", value: "$12/year", impact: "vs $1,200 traditional" },
-        { label: "Languages Supported", value: "47", impact: "Breaking language barriers" }
+        { label: "Website Leads", value: "10-15/month", impact: "vs 0 before" },
+        { label: "Listings Closed", value: "3 so far", impact: "From website leads" },
+        { label: "Organic Traffic", value: "Growing", impact: "Local SEO taking time" },
+        { label: "Agent Feedback", value: "Positive", impact: "Love having own site" },
+        { label: "Project Cost", value: "$11,500", impact: "Done in 10 weeks" },
+        { label: "Monthly Cost", value: "$35", impact: "Just hosting" }
       ],
       testimonial: {
-        quote: "This platform is changing lives. Students in remote villages now have access to the same quality education as those in major cities. The AI personalization means every child learns at their own pace and style.",
-        author: "Executive Director",
-        company: "International Education Foundation"
+        quote: "We finally have our own professional website. We're getting leads directly instead of paying Zillow for every click. It's early but we've already closed 3 deals from the site.",
+        author: "Mike Patterson",
+        company: "Patterson Realty"
       }
     },
     
-    globalImpact: "The platform demonstrates how education technology can improve learning outcomes affordably. It's being piloted by school districts in 3 countries as a supplemental learning tool."
+    globalImpact: "The agency is building their online presence and getting leads without paying per-click fees. They're adding more listings and optimizing for local search."
   },
 
   {
     id: 6,
-    title: "Climate Tech: Carbon Tracking Platform for Net-Zero Goals",
-    industry: "Climate Technology",
-    client: "Global Sustainability Consortium",
-    duration: "12 months",
+    title: "Accounting Firm Automates Client Onboarding",
+    industry: "Professional Services",
+    client: "Regional Accounting Firm",
+    duration: "2 months",
     image: "/business-handshake-partnership-black-and-white.jpg",
-    tags: ["Climate Tech", "Blockchain", "ESG Compliance"],
+    tags: ["Workflow Automation", "Document Management", "Client Portal"],
     
     challenge: {
-      title: "Corporate Carbon Reporting Crisis and Greenwashing",
-      description: "With 5,000+ companies committing to net-zero by 2050, there was no reliable way to track, verify, and report carbon emissions across complex global supply chains. Greenwashing was rampant, and investors couldn't trust ESG reports.",
+      title: "Manual Client Onboarding Taking 2 Weeks",
+      description: "An accounting firm with 25 staff was spending 2 weeks onboarding each new client with back-and-forth emails, paper forms, and manual data entry. Tax season was especially chaotic.",
       painPoints: [
-        "No standardized carbon tracking methodology",
-        "Manual data collection taking 6+ months",
-        "Impossible to track Scope 3 supply chain emissions",
-        "Greenwashing undermining legitimate efforts",
-        "Investors unable to verify ESG claims",
-        "Regulatory compliance becoming mandatory",
-        "No real-time visibility into carbon footprint"
+        "Client onboarding taking 2 weeks",
+        "Chasing clients for documents via email",
+        "Manual data entry from paper forms",
+        "Lost documents and missing information",
+        "Staff overwhelmed during tax season",
+        "No secure way to share sensitive documents"
       ]
     },
     
     solution: {
-      title: "Blockchain-Verified Carbon Tracking Ecosystem",
-      description: "We created a comprehensive platform that automatically tracks carbon emissions across entire supply chains, verifies data using blockchain, and provides real-time ESG reporting that meets all major regulatory frameworks.",
+      title: "Automated Client Portal and Workflow System",
+      description: "We built a secure client portal where new clients complete forms online, upload documents, and e-sign agreements. The system automatically creates client folders and notifies staff when everything is ready.",
       approach: [
-        "Built IoT integration for real-time emissions monitoring",
-        "Implemented blockchain for immutable carbon credit tracking",
-        "Created AI models to estimate Scope 3 supply chain emissions",
-        "Developed automated reporting for multiple ESG frameworks",
-        "Built supplier portal for supply chain transparency",
-        "Integrated with major carbon credit marketplaces",
-        "Created investor dashboard for ESG verification"
+        "Built secure client portal with encryption",
+        "Created digital intake forms with validation",
+        "Integrated DocuSign for e-signatures",
+        "Added secure document upload and storage",
+        "Built automated workflow notifications",
+        "Integrated with QuickBooks"
       ],
-      technologies: ["Ethereum", "Python", "React", "Node.js", "PostgreSQL", "AWS", "IoT Core"]
+      technologies: ["React", "Node.js", "DocuSign API", "AWS S3", "PostgreSQL"]
     },
     
     results: {
       metrics: [
-        { label: "Companies Using", value: "180+", impact: "Across 8 countries" },
-        { label: "Reporting Time", value: "Real-time", impact: "From 6 months manual process" },
-        { label: "Supply Chain Visibility", value: "100%", impact: "Full Scope 3 tracking" },
-        { label: "Carbon Reduced", value: "500K tons", impact: "Through optimization insights" },
-        { label: "Greenwashing Prevention", value: "Blockchain verified", impact: "Immutable records" },
-        { label: "Investment Unlocked", value: "$8M", impact: "ESG-verified companies" }
+        { label: "Onboarding Time", value: "3-4 days", impact: "From 2 weeks" },
+        { label: "Staff Time Saved", value: "A lot", impact: "Less back-and-forth" },
+        { label: "Client Feedback", value: "Great", impact: "Much easier for them" },
+        { label: "Tax Season", value: "Way smoother", impact: "Less chaos" },
+        { label: "Project Cost", value: "$8,900", impact: "Done in 7 weeks" },
+        { label: "Monthly Cost", value: "$42", impact: "Very reasonable" }
       ],
       testimonial: {
-        quote: "This platform has become the gold standard for carbon tracking. The blockchain verification gives our investors confidence, and the real-time insights have helped us reduce emissions by 34% in just one year.",
-        author: "Chief Sustainability Officer",
-        company: "Fortune 100 Corporation"
+        quote: "Tax season used to be chaos with clients emailing documents all over the place. Now everything comes through the portal organized. Clients find it easy to use and we're way more efficient.",
+        author: "Linda Chen, CPA",
+        company: "Chen & Associates"
       }
     },
     
-    globalImpact: "The platform demonstrates how companies can track carbon emissions accurately and affordably. It's being evaluated by industry associations as a standard for carbon reporting."
+    globalImpact: "The firm handled tax season much more smoothly and is now taking on more clients. They're planning to add more features to the portal."
   },
 
   {
     id: 7,
-    title: "Cybersecurity Shield: AI-Powered Threat Detection",
-    industry: "Cybersecurity",
-    client: "Critical Infrastructure Provider",
-    duration: "10 months",
+    title: "E-commerce Store Increases Sales with Custom Features",
+    industry: "E-commerce",
+    client: "Online Retail Store",
+    duration: "3 months",
     image: "/abstract-flowing-dark-water-waves-technology-textu.jpg",
-    tags: ["Cybersecurity", "AI/ML", "Zero Trust"],
+    tags: ["E-commerce", "Shopify", "Conversion Optimization"],
     
     challenge: {
-      title: "Sophisticated Attacks Bypassing Traditional Security",
-      description: "A critical infrastructure provider managing power grids for 50 million people was facing 10,000+ cyberattacks daily. Traditional security tools were missing 40% of threats, and a successful attack could cause widespread blackouts affecting millions.",
+      title: "High Cart Abandonment and Low Conversion Rate",
+      description: "An online store selling custom products had 78% cart abandonment rate and was losing sales to competitors. Their Shopify store lacked product customization features customers wanted.",
       painPoints: [
-        "5,000+ daily attack attempts",
-        "Traditional tools missing 40% of threats",
-        "Average detection time of 197 days for breaches",
-        "False positive rate of 85% overwhelming security team",
-        "No visibility into insider threats",
-        "Compliance requirements for critical infrastructure",
-        "Potential for catastrophic blackouts affecting millions"
+        "78% cart abandonment rate",
+        "No product customization options",
+        "Slow checkout process",
+        "No abandoned cart recovery",
+        "Limited product recommendations",
+        "Mobile experience was poor"
       ]
     },
     
     solution: {
-      title: "AI-Driven Zero Trust Security Architecture",
-      description: "We implemented a next-generation security platform using machine learning to detect anomalies in real-time, predict attacks before they happen, and automatically respond to threats while reducing false positives by 94%.",
+      title: "Custom Shopify App with Product Configurator",
+      description: "We built a custom Shopify app that lets customers personalize products with live previews, added one-click checkout, automated cart recovery emails, and AI-powered product recommendations.",
       approach: [
-        "Deployed AI models trained on 10 years of threat data",
-        "Implemented zero trust architecture across all systems",
-        "Built behavioral analytics for insider threat detection",
-        "Created automated incident response workflows",
-        "Deployed deception technology (honeypots) for threat intelligence",
-        "Integrated with SIEM and existing security tools",
-        "Established 24/7 AI-assisted security operations center"
+        "Built custom product configurator with live preview",
+        "Integrated Shopify Checkout API for faster checkout",
+        "Created automated cart abandonment email sequence",
+        "Added AI product recommendations",
+        "Optimized mobile experience",
+        "Integrated with existing inventory system"
       ],
-      technologies: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Kubernetes", "AWS", "Splunk"]
+      technologies: ["React", "Shopify API", "Node.js", "Klaviyo", "AWS Lambda"]
     },
     
     results: {
       metrics: [
-        { label: "Threat Detection", value: "99.7%", impact: "From 60% baseline" },
-        { label: "Detection Time", value: "2.3 seconds", impact: "From 197 days average" },
-        { label: "False Positives", value: "94% reduction", impact: "From 85% to 5%" },
-        { label: "Attacks Prevented", value: "1.8M annually", impact: "Including 23 critical threats" },
-        { label: "Response Time", value: "Automated", impact: "Instant vs 4-hour manual" },
-        { label: "Compliance", value: "100%", impact: "All regulatory requirements met" }
+        { label: "Cart Abandonment", value: "Down to 55%", impact: "From 78% before" },
+        { label: "Conversion Rate", value: "3.2%", impact: "From 1.8% before" },
+        { label: "Average Order", value: "$68", impact: "From $52 before" },
+        { label: "Monthly Sales", value: "Up 60%", impact: "In 4 months" },
+        { label: "Project Cost", value: "$12,800", impact: "Done in 9 weeks" },
+        { label: "Recovery Emails", value: "Working great", impact: "Getting 15-20% back" }
       ],
       testimonial: {
-        quote: "The AI-powered threat detection has been a game-changer. We're now stopping attacks in seconds that would have previously gone undetected for months. This technology is protecting critical infrastructure that millions depend on daily.",
-        author: "Chief Information Security Officer",
-        company: "Critical Infrastructure Provider"
+        quote: "The custom product builder was a game changer. People can see exactly what they're ordering before they buy. Sales are way up and the cart recovery emails bring back customers who left.",
+        author: "Rachel K.",
+        company: "CustomPrint Co."
       }
     },
     
-    globalImpact: "This security framework shows how critical infrastructure can be protected with modern AI-driven approaches. The methodology is being shared with other regional utility providers."
+    globalImpact: "The store is growing steadily and now ships to 8 states. They're planning to add more product options to the configurator."
   },
 
   {
     id: 8,
-    title: "FinTech Startup: From MVP to $10M Series A in 18 Months",
-    industry: "FinTech Startup",
-    client: "Digital Payment Startup",
-    duration: "18 months",
+    title: "Startup MVP Built in 8 Weeks",
+    industry: "Tech Startup",
+    client: "Local Tech Startup",
+    duration: "8 weeks",
     image: "/modern-fintech-dashboard.png",
     tags: ["MVP Development", "Rapid Scaling", "Series A"],
     
     challenge: {
-      title: "Startup Needed Market-Ready Product in 3 Months",
-      description: "A fintech startup with $200K seed funding needed to build and launch a digital payment platform quickly to capture market opportunity. They had limited budget, tight timeline, and needed to prove product-market fit before raising more capital.",
+      title: "Founders Needed MVP to Show Investors",
+      description: "Two founders had an idea for a marketplace app but no technical co-founder. They had $15K saved and needed an MVP to show potential investors and get early user feedback.",
       painPoints: [
-        "Only 3 months to build MVP before funding runs out",
-        "Limited technical team (2 developers)",
-        "Needed to process payments securely and compliantly",
-        "Had to scale from 0 to 50,000 users in 6 months",
-        "Competing against well-funded competitors",
-        "Required PCI-DSS compliance from day one"
+        "No technical co-founder",
+        "Limited budget ($15K)",
+        "Needed something to show investors",
+        "Wanted to test the idea with real users",
+        "Didn't know where to start"
       ]
     },
     
     solution: {
-      title: "Agile MVP Development with Built-in Scalability",
-      description: "We built a production-ready MVP in 10 weeks using modern tech stack, then iteratively added features based on user feedback. Our architecture was designed to scale from day one, allowing seamless growth from hundreds to hundreds of thousands of users.",
+      title: "Simple MVP to Test the Idea",
+      description: "We built a basic but functional marketplace where users can list items and others can browse and message sellers. Kept it simple to stay in budget while including the core features needed to test the concept.",
       approach: [
-        "Built MVP in 10 weeks with core payment features",
-        "Used serverless architecture for cost-effective scaling",
-        "Implemented Stripe for PCI-compliant payment processing",
-        "Created admin dashboard for real-time monitoring",
-        "Set up CI/CD for rapid feature deployment",
-        "Built mobile apps for iOS and Android simultaneously",
-        "Provided ongoing support and feature development"
+        "Built web app with core marketplace features",
+        "Added user authentication and profiles",
+        "Created listing and messaging system",
+        "Made it mobile-responsive",
+        "Set up basic analytics to track usage"
       ],
-      technologies: ["Next.js", "Node.js", "Stripe", "AWS Lambda", "PostgreSQL", "React Native"]
+      technologies: ["Next.js", "Supabase", "Stripe", "Vercel"]
     },
     
     results: {
       metrics: [
-        { label: "Time to Market", value: "10 weeks", impact: "Beat 3-month deadline" },
-        { label: "Users Acquired", value: "12,000+", impact: "In first 12 months" },
-        { label: "Transaction Volume", value: "$500K+", impact: "Monthly processing" },
-        { label: "Series A Raised", value: "$1.5M", impact: "At $6M valuation" },
-        { label: "Development Cost", value: "$45K total", impact: "vs $120K agency quote" },
-        { label: "System Uptime", value: "99.98%", impact: "Zero payment failures" }
+        { label: "Time to Launch", value: "8 weeks", impact: "On time" },
+        { label: "Early Users", value: "~150", impact: "Friends, family, local community" },
+        { label: "Listings Posted", value: "80+", impact: "People using it" },
+        { label: "Investor Meetings", value: "5 scheduled", impact: "Having something to show helps" },
+        { label: "Project Cost", value: "$14,500", impact: "Under budget" },
+        { label: "Monthly Cost", value: "$25", impact: "Very affordable to run" }
       ],
       testimonial: {
-        quote: "Boomi Tech understood the startup hustle. They moved fast, stayed within budget, and built a platform that scaled effortlessly. We couldn't have raised Series A without their technical execution.",
-        author: "Founder & CEO",
-        company: "Digital Payment Startup"
+        quote: "We had no idea how to build an app. Boomi Tech made it happen in 8 weeks for a price we could afford. Now we have something real to show investors and we're getting actual user feedback.",
+        author: "Co-Founder",
+        company: "Local Marketplace Startup"
       }
     },
     
-    globalImpact: "This success story demonstrates how startups can build and scale payment platforms affordably. The platform now serves users in 5 countries, with plans for regional expansion."
+    globalImpact: "The founders are now talking to investors and iterating based on user feedback. They're learning what works and what doesn't before investing more."
   },
 
   {
     id: 9,
-    title: "SaaS Startup: Zero to 1,000 Paying Customers in 8 Months",
-    industry: "SaaS Startup",
-    client: "B2B Productivity Tool Startup",
-    duration: "12 months",
+    title: "Side Project Turned Profitable SaaS",
+    industry: "SaaS",
+    client: "Solo Founder",
+    duration: "4 months",
     image: "/ecommerce-saas-platform.jpg",
     tags: ["SaaS Platform", "B2B", "Product-Market Fit"],
     
     challenge: {
-      title: "Bootstrapped Startup Needed Affordable, Scalable Solution",
-      description: "A bootstrapped SaaS startup needed to build a multi-tenant B2B platform with limited resources. They needed to validate product-market fit quickly, acquire customers, and scale infrastructure as they grew—all while keeping costs under $1,000/month.",
+      title: "Developer Wanted to Launch Side Project",
+      description: "A developer had a side project idea for a simple SaaS tool but didn't have time to build everything. Needed help with payments, user management, and getting it launched.",
       painPoints: [
-        "Bootstrapped with $30K budget (no VC funding)",
-        "Needed multi-tenant architecture from start",
-        "Had to compete with established SaaS companies",
-        "Required enterprise features (SSO, RBAC, audit logs)",
-        "Needed to keep infrastructure costs under $200/month initially",
-        "Had to iterate quickly based on customer feedback"
+        "Working full-time, limited time for side project",
+        "Didn't want to deal with payment integration",
+        "Needed user authentication and billing",
+        "Wanted to launch and see if people would pay",
+        "Budget was tight"
       ]
     },
     
     solution: {
-      title: "Cost-Effective Multi-Tenant SaaS Platform",
-      description: "We built a fully-featured SaaS platform using cost-effective technologies and serverless architecture. The platform included all enterprise features from day one, allowing them to target mid-market and enterprise customers immediately.",
+      title: "Simple SaaS with Stripe Subscriptions",
+      description: "We helped finish the core features, set up Stripe subscriptions with 3 pricing tiers, added user authentication, and got it launched. Kept it simple so it's easy to maintain.",
       approach: [
-        "Designed multi-tenant architecture with data isolation",
-        "Built subscription management with Stripe integration",
-        "Implemented SSO (SAML, OAuth) for enterprise customers",
-        "Created role-based access control (RBAC) system",
-        "Set up automated billing and invoicing",
-        "Built analytics dashboard for customer insights",
-        "Implemented usage-based pricing tiers"
+        "Finished core product features",
+        "Set up Stripe subscription billing",
+        "Added user auth and account management",
+        "Created simple admin dashboard",
+        "Deployed and set up domain"
       ],
-      technologies: ["Next.js", "Prisma", "PostgreSQL", "Stripe", "NextAuth", "Vercel", "Redis"]
+      technologies: ["Next.js", "Supabase", "Stripe", "Vercel"]
     },
     
     results: {
       metrics: [
-        { label: "Paying Customers", value: "1,000+", impact: "In 8 months" },
-        { label: "Monthly Recurring Revenue", value: "$25K", impact: "Growing 12% monthly" },
-        { label: "Customer Acquisition Cost", value: "$85", impact: "LTV/CAC ratio of 6:1" },
-        { label: "Infrastructure Costs", value: "$800/month", impact: "3% of revenue" },
-        { label: "Churn Rate", value: "2.5%", impact: "Industry avg is 5-7%" },
-        { label: "Enterprise Customers", value: "35", impact: "$200-800/month plans" }
+        { label: "Time to Launch", value: "4 months", impact: "Part-time work" },
+        { label: "Paying Users", value: "28", impact: "After 3 months live" },
+        { label: "Monthly Revenue", value: "~$800", impact: "Growing slowly" },
+        { label: "Churn", value: "Pretty low", impact: "People seem to like it" },
+        { label: "Project Cost", value: "$10,500", impact: "Affordable" },
+        { label: "Monthly Costs", value: "$30", impact: "Hosting + database" }
       ],
       testimonial: {
-        quote: "As a bootstrapped founder, every dollar mattered. Boomi Tech delivered enterprise-grade features at startup prices. We're now profitable and growing fast without any VC funding.",
-        author: "Founder",
-        company: "B2B Productivity SaaS"
+        quote: "I had the idea but not the time to build everything. Boomi Tech helped me launch in 4 months. I'm making $800/month now and it's growing. Not quitting my job yet but it's exciting!",
+        author: "Alex M.",
+        company: "Solo SaaS Founder"
       }
     },
     
-    globalImpact: "This platform serves customers in 8 countries, proving that bootstrapped startups can build profitable SaaS products. The success demonstrates sustainable growth without VC funding."
+    globalImpact: "The SaaS is growing organically through word of mouth. The founder is adding features based on user requests and considering going full-time if it hits $3K/month."
   },
 
   {
     id: 10,
-    title: "AI Startup: From Idea to Product Hunt #1 in 4 Months",
-    industry: "AI/ML Startup",
-    client: "AI Content Generation Startup",
-    duration: "4 months",
+    title: "Simple AI Tool for Content Creators",
+    industry: "AI Tool",
+    client: "Content Creator",
+    duration: "6 weeks",
     image: "/software-development-coding.png",
-    tags: ["AI/ML", "Viral Launch", "Rapid Growth"],
+    tags: ["AI", "Content Creation", "Side Project"],
     
     challenge: {
-      title: "AI Startup Racing to Market in Competitive Space",
-      description: "An AI startup wanted to launch a content generation tool in the rapidly evolving AI space. They needed to move extremely fast, differentiate from competitors, and create a viral product that would attract early adopters and investors.",
+      title: "Creator Wanted AI Tool for Their Audience",
+      description: "A content creator with a YouTube following wanted to build a simple AI tool for their audience. They had the idea and the audience, but no coding experience.",
       painPoints: [
-        "Highly competitive AI content generation market",
-        "Needed to launch before competitors copied the idea",
-        "Limited AI/ML expertise in-house",
-        "Required scalable infrastructure for viral growth",
-        "Needed to manage OpenAI API costs effectively",
-        "Had to create unique features to stand out"
+        "No coding experience",
+        "Wanted something simple their audience could use",
+        "Worried about OpenAI API costs getting out of control",
+        "Needed to charge to cover costs",
+        "Wanted to launch quickly"
       ]
     },
     
     solution: {
-      title: "AI-Powered Platform with Viral Growth Features",
-      description: "We built an AI content generation platform with unique features that competitors didn't have, optimized for viral sharing and rapid user acquisition. The platform was designed to handle sudden traffic spikes and manage AI API costs intelligently.",
+      title: "Simple AI Tool with Usage Limits",
+      description: "We built a straightforward AI tool that does one thing well. Added usage limits for free users and a simple paid plan. Set up cost controls so API costs don't spiral.",
       approach: [
-        "Integrated OpenAI GPT-4 with custom prompt engineering",
-        "Built intelligent caching to reduce API costs by 70%",
-        "Created viral sharing features (public galleries, templates)",
-        "Implemented freemium model with smart upgrade prompts",
-        "Set up auto-scaling infrastructure for traffic spikes",
-        "Built waitlist and referral system for launch",
-        "Created Product Hunt launch strategy and assets"
+        "Integrated OpenAI API with good prompts",
+        "Added usage limits and rate limiting",
+        "Set up simple Stripe payment for pro plan",
+        "Made it super easy to use",
+        "Added cost monitoring and alerts"
       ],
-      technologies: ["Next.js", "OpenAI API", "Vercel", "Supabase", "Redis", "Stripe", "Tailwind"]
+      technologies: ["Next.js", "OpenAI API", "Stripe", "Vercel"]
     },
     
     results: {
       metrics: [
-        { label: "Product Hunt Ranking", value: "#1 Product", impact: "Launch day" },
-        { label: "Users in First Week", value: "50,000+", impact: "Viral growth" },
-        { label: "Conversion to Paid", value: "8.5%", impact: "Industry avg is 2-3%" },
-        { label: "Monthly Revenue", value: "$8K", impact: "Month 3 post-launch" },
-        { label: "API Cost Optimization", value: "70% reduction", impact: "Through smart caching" },
-        { label: "Seed Funding", value: "$500K raised", impact: "Based on traction" }
+        { label: "Time to Launch", value: "6 weeks", impact: "Quick turnaround" },
+        { label: "Users", value: "~400", impact: "From YouTube audience" },
+        { label: "Paid Users", value: "18", impact: "$9/month plan" },
+        { label: "Monthly Revenue", value: "$162", impact: "Covers costs + profit" },
+        { label: "Project Cost", value: "$5,800", impact: "Within budget" },
+        { label: "API Costs", value: "~$45/month", impact: "Under control" }
       ],
       testimonial: {
-        quote: "Boomi Tech helped us move at startup speed. We went from idea to Product Hunt #1 in 4 months. Their AI expertise and growth-focused development approach was exactly what we needed.",
-        author: "Co-Founder",
-        company: "AI Content Generation Startup"
+        quote: "I had zero coding skills but wanted to make something useful for my audience. Boomi Tech built exactly what I needed. It's making a bit of money and people actually use it!",
+        author: "Sarah J.",
+        company: "YouTube Creator (85K subs)"
       }
     },
     
-    globalImpact: "The platform now serves creators in 15 countries, showing how startups can leverage AI affordably. It demonstrates that viral growth is possible with smart product design and cost optimization."
+    globalImpact: "The tool is being used by the creator's audience and generating some revenue. They're thinking about adding more features based on user feedback."
   }
 ]

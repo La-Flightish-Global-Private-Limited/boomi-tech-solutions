@@ -3,7 +3,16 @@ import { Footer } from "@/components/footer"
 
 export const metadata = {
   title: "Privacy Policy | Boomi Tech Solutions",
-  description: "Learn how Boomi Tech Solutions collects, uses, and protects your personal information.",
+  description: "Learn how Boomi Tech Solutions collects, uses, and protects your personal information. GDPR compliant privacy policy and data protection practices.",
+  openGraph: {
+    title: "Privacy Policy | Boomi Tech Solutions",
+    description: "Learn how Boomi Tech Solutions collects, uses, and protects your personal information.",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function PrivacyPage() {
@@ -131,11 +140,25 @@ export default function PrivacyPage() {
                 <p className="text-slate-300">
                   <strong className="text-white">Boomi Tech Solutions LLC</strong>
                   <br />
-                  Email: privacy@boomitechsolutions.com
+                  Owner: Karthikeyan Veeran
                   <br />
-                  Phone: [Your Phone Number]
+                  Email: mydearkarthikeyan@gmail.com
                   <br />
-                  Address: [Your Business Address]
+                  Phone: +91 9789998455
+                  <br />
+                  <br />
+                  <strong className="text-white">Registered Address:</strong>
+                  <br />
+                  30 N Gould St Ste R, Sheridan, WY 82801, USA
+                  <br />
+                  EIN: 35-2822033
+                  <br />
+                  <br />
+                  <strong className="text-white">Trade Address:</strong>
+                  <br />
+                  D142, SBIOA Unity Enclave, Mambakkam
+                  <br />
+                  Chennai, Tamil Nadu 600127, India
                 </p>
               </div>
             </section>

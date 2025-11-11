@@ -11,14 +11,21 @@ export const siteConfig = {
       "Leading technology services company specializing in AI, cloud infrastructure, SAAS development, and digital transformation.",
   },
   contact: {
-    email: "contact@boomitech.com",
-    phone: "+1 (555) 123-4567",
+    email: "mydearkarthikeyan@gmail.com",
+    phone: "+91 9789998455",
     address: {
-      street: "123 Tech Street",
-      city: "Silicon Valley",
-      state: "CA",
-      zip: "94000",
+      street: "30 N Gould St Ste R",
+      city: "Sheridan",
+      state: "WY",
+      zip: "82801",
       country: "USA",
+    },
+    tradeAddress: {
+      street: "D142, SBIOA Unity Enclave, Mambakkam",
+      city: "Chennai",
+      state: "Tamil Nadu",
+      zip: "600127",
+      country: "India",
     },
   },
   social: {
@@ -38,7 +45,10 @@ export const siteConfig = {
   business: {
     founded: "2006",
     employees: "50-200",
-    headquarters: "Silicon Valley, CA",
+    headquarters: "Sheridan, WY",
+    registrationNumber: "EIN: 35-2822033",
+    businessType: "Registered company",
+    owner: "Karthikeyan Veeran",
   },
 }
 

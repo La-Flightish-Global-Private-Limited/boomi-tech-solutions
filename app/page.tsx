@@ -2,6 +2,8 @@ import { HeroSection } from "@/components/hero-section"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { StructuredData } from "@/components/structured-data"
+import { AnnouncementBar } from "@/components/announcement-bar"
+import { FlagshipProductSection } from "@/components/flagship-product-section"
 import dynamic from "next/dynamic"
 
 const ServicesOverview = dynamic(() => import("@/components/services-overview").then((mod) => mod.ServicesOverview), {
@@ -32,9 +34,13 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <StructuredData />
+      <AnnouncementBar />
       <Navigation />
       <main id="main-content">
         <HeroSection />
+        <ScrollReveal>
+          <FlagshipProductSection />
+        </ScrollReveal>
         <ScrollReveal>
           <TrustIndicators />
         </ScrollReveal>

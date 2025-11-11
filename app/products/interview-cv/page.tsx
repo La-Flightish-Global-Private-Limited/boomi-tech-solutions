@@ -51,7 +51,7 @@ export default function InterviewCVPage() {
                     <Globe className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6">
+                <Button asChild size="lg" variant="outline" className="border-2 border-white bg-white/10 text-white hover:bg-white hover:text-blue-600 font-bold text-lg px-8 py-6">
                   <Link href="/#contact">
                     Partner With Us
                     <Rocket className="ml-2 h-5 w-5" />

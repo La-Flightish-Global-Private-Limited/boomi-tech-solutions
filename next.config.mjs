@@ -14,6 +14,9 @@ const nextConfig = {
   },
   // Enable React strict mode for better development experience
   reactStrictMode: true,
+  experimental: {
+    reactCompiler: false,
+  },
 }
 
 export default nextConfig

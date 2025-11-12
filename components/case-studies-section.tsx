@@ -11,18 +11,18 @@ import { Separator } from "@/components/ui/separator"
 
 export function CaseStudiesSection() {
   return (
-    <section id="case-studies" className="py-24 sm:py-32 bg-gray-50">
+    <section id="case-studies" className="py-16 sm:py-20 bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <div className="mx-auto max-w-2xl text-center mb-10">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
             Success Stories That Speak Volumes
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
+          <p className="mt-3 text-base leading-7 text-gray-600">
             Real results from real clients. See how we've helped businesses transform and scale.
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {detailedCaseStudies.map((study, idx) => (
             <article
               key={idx}

@@ -8,13 +8,13 @@ import { Sparkles, Users, TrendingUp, Globe, Rocket, ArrowRight, CheckCircle2 } 
 
 export function FlagshipProductSection() {
   return (
-    <section className="py-24 sm:py-32 bg-gradient-to-b from-blue-50 via-white to-purple-50 relative overflow-hidden">
+    <section className="py-16 sm:py-20 bg-gradient-to-b from-blue-50 via-white to-purple-50 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
       
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <Badge className="mb-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 text-sm font-semibold">
             <Sparkles className="mr-2 h-4 w-4" />
             Our Flagship AI Product
@@ -29,7 +29,7 @@ export function FlagshipProductSection() {
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
           {/* Left: Product Info */}
           <div className="space-y-8">
             <div>
@@ -90,66 +90,80 @@ export function FlagshipProductSection() {
             </div>
           </div>
 
-          {/* Right: Visual/CTA */}
+          {/* Right: Investor/Partner CTA */}
           <div className="relative">
-            <div className="relative rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 p-8 shadow-2xl">
+            <div className="relative rounded-2xl bg-gradient-to-br from-blue-600 via-purple-600 to-blue-600 p-8 shadow-2xl">
               <div className="absolute inset-0 bg-grid-white/10 rounded-2xl" />
               <div className="relative space-y-6">
                 <div className="text-white">
-                  <h3 className="text-2xl font-bold mb-4">🚀 Seeking Strategic Partners</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <Users className="h-5 w-5" />
-                      <span>Co-Founders with US Market Expertise</span>
+                  <h3 className="text-2xl font-bold mb-2">💼 Investment Opportunity</h3>
+                  <p className="text-white/90 text-sm mb-4">Pre-seed stage • $200B+ TAM • AI-powered SaaS</p>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                      <div className="flex items-center gap-2 mb-1">
+                        <TrendingUp className="h-4 w-4" />
+                        <span className="font-semibold text-sm">Market Opportunity</span>
+                      </div>
+                      <p className="text-xs text-white/80">Global recruitment market: $200B+ (2025), growing 7.2% CAGR. AI recruitment tech: $3.2B → $10B by 2030.</p>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <TrendingUp className="h-5 w-5" />
-                      <span>Investors & Venture Capital</span>
+                    
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Rocket className="h-4 w-4" />
+                        <span className="font-semibold text-sm">Traction & Timeline</span>
+                      </div>
+                      <p className="text-xs text-white/80">MVP in deployment • Beta launch Q1 2026 • 100+ waitlist signups • B2B + B2C revenue model.</p>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <Rocket className="h-5 w-5" />
-                      <span>Incubators & Accelerators</span>
+                    
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Users className="h-4 w-4" />
+                        <span className="font-semibold text-sm">Team & Expertise</span>
+                      </div>
+                      <p className="text-xs text-white/80">18+ years combined tech experience • Proven track record in AI/ML • 50+ successful projects delivered.</p>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <Globe className="h-5 w-5" />
-                      <span>Strategic Tech Partners</span>
+                  </div>
+
+                  <div className="border-t border-white/20 pt-4">
+                    <p className="text-sm font-semibold mb-3">🎯 Seeking:</p>
+                    <div className="grid grid-cols-2 gap-2 text-xs">
+                      <div className="bg-white/10 rounded px-2 py-1">• Angel Investors</div>
+                      <div className="bg-white/10 rounded px-2 py-1">• Venture Capital</div>
+                      <div className="bg-white/10 rounded px-2 py-1">• Co-Founders (US)</div>
+                      <div className="bg-white/10 rounded px-2 py-1">• Incubators/Accelerators</div>
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-white/20">
-                  <p className="text-white/90 text-sm mb-4">
-                    Join us in revolutionizing the $200B+ global recruitment market
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Button 
-                      asChild 
-                      size="lg" 
-                      className="bg-white text-blue-600 hover:bg-gray-100 font-semibold"
-                    >
-                      <Link href="/products/interview-cv">
-                        View Product Details
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Link>
-                    </Button>
-                    <Button 
-                      asChild 
-                      size="lg" 
-                      variant="outline" 
-                      className="border-2 border-white bg-white/10 text-white hover:bg-white hover:text-blue-600 font-semibold"
-                    >
-                      <Link href="#contact">
-                        Partner With Us
-                      </Link>
-                    </Button>
-                  </div>
+                <div className="flex flex-col gap-3">
+                  <Button 
+                    asChild 
+                    size="lg" 
+                    className="bg-white text-blue-600 hover:bg-gray-100 font-semibold w-full"
+                  >
+                    <Link href="#contact">
+                      Schedule Investor Meeting
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button 
+                    asChild 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-2 border-white bg-white/10 text-white hover:bg-white hover:text-blue-600 font-semibold w-full"
+                  >
+                    <Link href="mailto:mydearkarthikeyan@gmail.com">
+                      Email Directly
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </div>
 
             {/* Floating badges */}
             <div className="absolute -top-4 -right-4 bg-white rounded-full px-4 py-2 shadow-lg border-2 border-blue-200">
-              <span className="text-sm font-semibold text-blue-600">🌟 Live Now</span>
+              <span className="text-sm font-semibold text-blue-600">🚀 Launching Soon</span>
             </div>
             <div className="absolute -bottom-4 -left-4 bg-white rounded-full px-4 py-2 shadow-lg border-2 border-purple-200">
               <span className="text-sm font-semibold text-purple-600">💼 B2B + B2C</span>

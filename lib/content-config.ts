@@ -1,7 +1,7 @@
 // Content Configuration - Admin Configurable
 // Update these values to customize all website content without touching component code
 
-import { caseStudies as detailedCaseStudies } from './case-studies-data'
+import { caseStudies as detailedCaseStudies } from './case-studies-data-new'
 
 export const contentConfig = {
   // Hero Section
@@ -70,44 +70,49 @@ export const contentConfig = {
       description: "Boost your online presence with data-driven marketing strategies and search engine optimization.",
       icon: "TrendingUp",
     },
+    {
+      title: "Professional Training & Cert Prep",
+      description: "Expert-led training and certification preparation for cloud platforms, AI/ML, modern frameworks, and career development.",
+      icon: "GraduationCap",
+    },
   ],
 
   // Testimonials
   testimonials: [
     {
-      name: "Sarah Johnson",
-      role: "CTO, FinTech Innovations",
-      company: "Fortune 500 Financial Services",
-      image: "/professional-woman-executive.png",
-      content:
-        "Boomi Tech Solutions transformed our legacy mainframe systems into a modern cloud-native architecture. Their expertise in modernization saved us millions and improved our time-to-market by 60%.",
-      rating: 5,
-    },
-    {
-      name: "Michael Chen",
-      role: "VP of Engineering",
-      company: "HealthTech Global",
+      name: "Alex Thompson",
+      role: "Founder",
+      company: "TechStart AI",
       image: "/professional-executive-man.png",
       content:
-        "The AI automation solutions delivered by Boomi exceeded our expectations. Their team's deep technical knowledge and commitment to excellence made them an invaluable partner in our digital transformation.",
+        "Boomi built our RAG-powered customer support chatbot in just 6 weeks. It handles 80% of our support tickets automatically. The quality and speed of delivery was exceptional.",
       rating: 5,
     },
     {
-      name: "Emily Rodriguez",
-      role: "CEO",
-      company: "RetailNext Solutions",
-      image: "/professional-woman-ceo.png",
+      name: "Sarah Martinez",
+      role: "CTO",
+      company: "HealthSync Platform",
+      image: "/professional-woman-executive.png",
       content:
-        "From MVP to full-scale SAAS platform in record time. Boomi's agile approach and technical prowess helped us secure Series A funding. They're not just developers, they're strategic partners.",
+        "They helped us build an AI agent that automates medical record processing. What used to take hours now takes minutes. Their expertise in LLMs and healthcare compliance was invaluable.",
       rating: 5,
     },
     {
-      name: "David Park",
-      role: "Director of IT",
-      company: "Manufacturing Corp",
+      name: "James Wilson",
+      role: "CEO",
+      company: "DataFlow Analytics",
       image: "/professional-man-director.jpg",
       content:
-        "Their multi-cloud infrastructure expertise helped us achieve 99.99% uptime while reducing our cloud costs by 40%. The DevOps practices they implemented revolutionized our deployment pipeline.",
+        "From concept to production in 3 months. Boomi delivered a custom LLM application that analyzes financial documents with 95% accuracy. They're our go-to partner for AI projects.",
+      rating: 5,
+    },
+    {
+      name: "Emily Chen",
+      role: "Product Manager",
+      company: "EduTech Solutions",
+      image: "/professional-woman-ceo.png",
+      content:
+        "The AI tutoring system they built uses GPT-4 to provide personalized learning. Our student engagement increased 3x. Boomi made complex AI technology accessible and practical.",
       rating: 5,
     },
   ],
@@ -117,29 +122,29 @@ export const contentConfig = {
   // Company Stats
   stats: [
     {
-      value: "500+",
+      value: "50+",
       label: "Projects Delivered",
       description: "Successfully completed across industries",
     },
     {
-      value: "98%",
+      value: "100%",
       label: "Client Satisfaction",
-      description: "Based on post-project surveys",
-    },
-    {
-      value: "50+",
-      label: "Enterprise Clients",
-      description: "Fortune 500 and growing startups",
+      description: "Every client recommends us",
     },
     {
       value: "15+",
+      label: "Active Clients",
+      description: "Growing startups and SMBs",
+    },
+    {
+      value: "18+",
       label: "Years Experience",
       description: "Combined team expertise",
     },
     {
-      value: "24/7",
-      label: "Support Available",
-      description: "Round-the-clock technical assistance",
+      value: "5+",
+      label: "AI/LLM Projects",
+      description: "RAG, agents, and custom models",
     },
     {
       value: "99.9%",
@@ -150,14 +155,14 @@ export const contentConfig = {
 
   // Trust Indicators - Company Logos
   trustedBy: {
-    title: "Trusted by Leading Organizations",
-    subtitle: "Join hundreds of companies that trust us with their technology needs",
+    title: "Built with Industry-Leading Technologies",
+    subtitle: "Leveraging cutting-edge tools and platforms to deliver exceptional results",
     companies: [
-      { name: "Microsoft", logo: "/microsoft-logo.png" },
-      { name: "Amazon", logo: "/amazon-logo.png" },
-      { name: "Google", logo: "/google-logo.png" },
-      { name: "IBM", logo: "/ibm-logo.png" },
-      { name: "Oracle", logo: "/oracle-logo.png" },
+      { name: "AWS", logo: "/amazon-logo.png" },
+      { name: "Google Cloud", logo: "/google-logo.png" },
+      { name: "Microsoft Azure", logo: "/microsoft-logo.png" },
+      { name: "Oracle Cloud", logo: "/oracle-logo.png" },
+      { name: "IBM Cloud", logo: "/ibm-logo.png" },
       { name: "Salesforce", logo: "/salesforce-logo.png" },
     ],
   },
@@ -204,6 +209,11 @@ export const contentConfig = {
       answer:
         "We offer flexible pricing including fixed-price projects, time & materials, and dedicated team models. Pricing depends on project scope, timeline, and resource requirements. Contact us for a detailed quote.",
     },
+    {
+      question: "Do you offer training and certification programs?",
+      answer:
+        "Yes! We provide professional training and certification preparation in cloud platforms (AWS, Azure, GCP), AI/ML, modern web frameworks (Next.js, React, Astro), cybersecurity, mainframes, Salesforce, big data, and career development (PMP, Agile). Note: We prepare you for exams; certifications are issued by respective organizations. Both corporate and individual training available.",
+    },
   ],
 
   // About Section
@@ -211,7 +221,7 @@ export const contentConfig = {
     title: "Why Choose Boomi Tech Solutions",
     subtitle: "We're not just developers—we're your strategic technology partner",
     description:
-      "With over 15 years of combined expertise, we've helped hundreds of companies transform their businesses through innovative technology solutions. Our team of seasoned engineers, architects, and consultants brings deep technical knowledge and a proven track record of delivering results.",
+      "We're an emerging technology company specializing in AI/LLM applications, modern web development, and cloud solutions. Our team brings 18+ years of combined expertise from leading tech companies, now focused on helping startups and SMBs leverage cutting-edge AI technology.",
     values: [
       {
         title: "Innovation First",
@@ -252,6 +262,83 @@ export const contentConfig = {
     buttonText: "Schedule a Free Consultation",
     buttonLink: "#contact",
     secondaryText: "Or call us at",
+  },
+
+  // Training Programs
+  training: {
+    title: "Professional Training & Certification Preparation",
+    subtitle: "Prepare your team for industry-recognized certifications with expert-led training",
+    categories: [
+      {
+        name: "Cloud Platforms",
+        icon: "Cloud",
+        courses: [
+          { name: "AWS Solutions Architect", level: "Associate & Professional", duration: "8-12 weeks" },
+          { name: "Azure Administrator & Developer", level: "AZ-104, AZ-204", duration: "8-10 weeks" },
+          { name: "Google Cloud Engineer", level: "Associate & Professional", duration: "8-12 weeks" },
+          { name: "Multi-Cloud Architecture", level: "Advanced", duration: "6 weeks" },
+        ]
+      },
+      {
+        name: "AI & Machine Learning",
+        icon: "Brain",
+        courses: [
+          { name: "Generative AI & LLMs", level: "GPT-4, Claude, Gemini", duration: "6 weeks" },
+          { name: "RAG & Vector Databases", level: "LangChain, Pinecone", duration: "4 weeks" },
+          { name: "AI Agent Development", level: "AutoGPT, LangGraph", duration: "6 weeks" },
+          { name: "Machine Learning with Python", level: "TensorFlow, PyTorch", duration: "10 weeks" },
+        ]
+      },
+      {
+        name: "Modern Web Development",
+        icon: "Code",
+        courses: [
+          { name: "Next.js 15 & React 19", level: "Beginner to Advanced", duration: "8 weeks" },
+          { name: "Astro.js & Modern SSG", level: "Intermediate", duration: "4 weeks" },
+          { name: "Full-Stack TypeScript", level: "Node.js, Prisma, tRPC", duration: "10 weeks" },
+          { name: "N8N Workflow Automation", level: "No-code/Low-code", duration: "3 weeks" },
+        ]
+      },
+      {
+        name: "Enterprise & Legacy",
+        icon: "Server",
+        courses: [
+          { name: "Mainframe Modernization", level: "COBOL to Cloud", duration: "12 weeks" },
+          { name: "Salesforce Development", level: "Admin & Developer", duration: "8 weeks" },
+          { name: "Big Data Engineering", level: "Spark, Hadoop, Kafka", duration: "10 weeks" },
+          { name: "Data Engineering with Python", level: "ETL, Airflow, dbt", duration: "8 weeks" },
+        ]
+      },
+      {
+        name: "Security & Compliance",
+        icon: "Shield",
+        courses: [
+          { name: "Cybersecurity Fundamentals", level: "CompTIA Security+", duration: "8 weeks" },
+          { name: "Cloud Security", level: "AWS/Azure/GCP", duration: "6 weeks" },
+          { name: "DevSecOps", level: "Security in CI/CD", duration: "6 weeks" },
+          { name: "Ethical Hacking & Pentesting", level: "CEH Prep", duration: "10 weeks" },
+        ]
+      },
+      {
+        name: "Career Development",
+        icon: "TrendingUp",
+        courses: [
+          { name: "PMP Certification Prep", level: "Project Management", duration: "8 weeks" },
+          { name: "Agile & Scrum Master", level: "CSM, PSM", duration: "4 weeks" },
+          { name: "Tech Leadership", level: "CTO/VP Engineering", duration: "6 weeks" },
+          { name: "Interview Preparation", level: "FAANG & Startups", duration: "4 weeks" },
+        ]
+      },
+    ],
+    features: [
+      "Live instructor-led sessions",
+      "Hands-on labs and real-world projects",
+      "Exam preparation and study materials",
+      "Career guidance and mentorship",
+      "Flexible weekend/evening batches",
+      "Lifetime access to course materials",
+    ],
+    disclaimer: "We provide training and exam preparation. Certifications are issued by respective organizations (AWS, Microsoft, Google, PMI, etc.)."
   },
 }
 

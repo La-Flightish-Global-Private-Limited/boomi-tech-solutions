@@ -14,15 +14,16 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center bg-background">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-32 text-center">
-        <h1
-          className={`text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-foreground mb-8 text-balance leading-[1.1] transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-        >
-          {contentConfig.hero.title}
+    <section className="relative min-h-[70vh] flex items-center justify-center bg-background">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 text-center">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6 text-balance leading-[1.2] text-foreground">
+          Transform Your Business with{' '}
+          <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 inline-block" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', color: 'transparent'}}>
+            Enterprise-Grade Technology Solutions
+          </span>
         </h1>
         <p
-          className={`text-xl sm:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed text-pretty font-light transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          className={`text-lg sm:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed text-pretty font-light transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
         >
           {contentConfig.hero.subtitle}
         </p>

@@ -47,11 +47,11 @@ const faqs = [
 
 export function FAQSection() {
   return (
-    <section className="py-24 px-4 bg-white">
+    <section className="py-16 px-4 bg-white">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 text-balance">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-600 text-pretty">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-3 text-balance">Frequently Asked Questions</h2>
+          <p className="text-lg text-gray-600 text-pretty">
             Got questions? We've got answers. Find everything you need to know about working with us.
           </p>
         </div>

@@ -1,11 +1,170 @@
 export const caseStudies = [
   {
     id: 1,
+    title: "AI-Powered Document Analysis Platform",
+    industry: "Legal Tech",
+    client: "LegalFlow AI",
+    duration: "3 months",
+    image: "/software-development-coding.png",
+    tags: ["LLM", "RAG", "GPT-4"],
+    
+    challenge: {
+      title: "Manual Contract Review Taking Days",
+      description: "A legal startup needed to analyze thousands of contracts quickly. Their lawyers were spending 2-3 hours per contract doing manual review, creating a bottleneck.",
+      painPoints: [
+        "Manual contract review taking 2-3 hours each",
+        "Missing critical clauses and risks",
+        "Can't scale to handle more clients",
+        "High cost per contract reviewed",
+        "Inconsistent analysis quality"
+      ]
+    },
+    
+    solution: {
+      title: "RAG-Powered Contract Analysis System",
+      description: "Built an AI system using GPT-4 and RAG (Retrieval Augmented Generation) that analyzes contracts, extracts key terms, identifies risks, and generates summaries in minutes.",
+      approach: [
+        "Implemented RAG with vector database (Pinecone)",
+        "Fine-tuned prompts for legal document analysis",
+        "Built document parsing pipeline (PDF to text)",
+        "Created risk scoring algorithm",
+        "Added human-in-the-loop review workflow"
+      ],
+      technologies: ["GPT-4", "LangChain", "Pinecone", "Next.js", "Python"]
+    },
+    
+    results: {
+      metrics: [
+        { label: "Analysis Time", value: "5 minutes", impact: "From 2-3 hours" },
+        { label: "Accuracy", value: "94%", impact: "Validated by lawyers" },
+        { label: "Cost per Contract", value: "$2", impact: "From $150 manual" },
+        { label: "Contracts/Day", value: "200+", impact: "From 10-15" },
+        { label: "Project Cost", value: "$18K", impact: "3-month timeline" },
+        { label: "Monthly Cost", value: "$400", impact: "OpenAI + hosting" }
+      ],
+      testimonial: {
+        quote: "This AI system transformed our business. We can now analyze 200+ contracts daily with 94% accuracy. Our clients get results in minutes instead of days.",
+        author: "Sarah Kim, CEO",
+        company: "LegalFlow AI"
+      }
+    },
+    
+    globalImpact: "The startup raised $2M seed funding after demonstrating the platform's capabilities. Now processing 5K+ contracts monthly."
+  },
+
+  {
+    id: 2,
+    title: "Custom AI Agent for E-commerce Support",
+    industry: "E-commerce",
+    client: "ShopSmart Online",
+    duration: "6 weeks",
+    image: "/ecommerce-saas-platform.jpg",
+    tags: ["AI Agents", "GPT-4", "Automation"],
+    
+    challenge: {
+      title: "Customer Support Team Overwhelmed",
+      description: "An e-commerce store with 50K monthly orders had 3 support agents handling 500+ tickets daily. Response times were 24+ hours, causing customer complaints.",
+      painPoints: [
+        "500+ support tickets daily",
+        "24+ hour response times",
+        "3 agents completely overwhelmed",
+        "Repetitive questions (order status, returns, etc.)",
+        "Customer satisfaction dropping"
+      ]
+    },
+    
+    solution: {
+      title: "Intelligent AI Support Agent",
+      description: "Built an AI agent using GPT-4 that handles common queries, checks order status, processes returns, and escalates complex issues to humans. Integrated with Shopify and email.",
+      approach: [
+        "Trained GPT-4 on company policies and FAQs",
+        "Integrated with Shopify API for order data",
+        "Built email and chat interfaces",
+        "Created escalation logic for complex cases",
+        "Added sentiment analysis for priority routing"
+      ],
+      technologies: ["GPT-4", "LangChain", "Shopify API", "Next.js", "Vercel"]
+    },
+    
+    results: {
+      metrics: [
+        { label: "Tickets Automated", value: "80%", impact: "400+ daily" },
+        { label: "Response Time", value: "< 1 minute", impact: "From 24+ hours" },
+        { label: "Customer Satisfaction", value: "4.8/5", impact: "From 3.2/5" },
+        { label: "Support Cost", value: "60% reduction", impact: "Huge savings" },
+        { label: "Project Cost", value: "$12K", impact: "6-week delivery" },
+        { label: "Monthly Cost", value: "$250", impact: "OpenAI + hosting" }
+      ],
+      testimonial: {
+        quote: "The AI agent handles 80% of our support tickets instantly. Our team now focuses on complex issues. Customer satisfaction went from 3.2 to 4.8 stars.",
+        author: "Mike Rodriguez",
+        company: "ShopSmart Online"
+      }
+    },
+    
+    globalImpact: "The company scaled from 50K to 100K monthly orders without hiring more support staff. Planning to expand AI to other departments."
+  },
+
+  {
+    id: 3,
+    title: "RAG-Based Knowledge Management System",
+    industry: "SaaS",
+    client: "DevDocs Platform",
+    duration: "2 months",
+    image: "/professional-technology-team-collaboration.jpg",
+    tags: ["RAG", "Vector DB", "Embeddings"],
+    
+    challenge: {
+      title: "Developers Can't Find Documentation",
+      description: "A developer tools company had 10K+ documentation pages. Developers spent hours searching for answers, and support was flooded with questions already answered in docs.",
+      painPoints: [
+        "10K+ documentation pages",
+        "Developers can't find answers",
+        "Search returns irrelevant results",
+        "Support team answering same questions",
+        "Documentation scattered across platforms"
+      ]
+    },
+    
+    solution: {
+      title: "AI-Powered Documentation Search",
+      description: "Built a RAG system that understands natural language questions and returns precise answers from documentation with source citations. Works like ChatGPT but for their docs.",
+      approach: [
+        "Embedded all documentation using OpenAI",
+        "Stored vectors in Pinecone database",
+        "Built semantic search with GPT-4",
+        "Added source citation and links",
+        "Created feedback loop for improvements"
+      ],
+      technologies: ["GPT-4", "OpenAI Embeddings", "Pinecone", "Next.js", "TypeScript"]
+    },
+    
+    results: {
+      metrics: [
+        { label: "Search Accuracy", value: "92%", impact: "Finds right answer" },
+        { label: "Time to Answer", value: "< 10 seconds", impact: "From 30+ minutes" },
+        { label: "Support Tickets", value: "50% reduction", impact: "Fewer questions" },
+        { label: "Developer Satisfaction", value: "4.7/5", impact: "Love the feature" },
+        { label: "Project Cost", value: "$15K", impact: "8-week timeline" },
+        { label: "Monthly Cost", value: "$180", impact: "Very affordable" }
+      ],
+      testimonial: {
+        quote: "Developers love this. They ask questions in plain English and get instant, accurate answers with source links. Support tickets dropped 50%.",
+        author: "Lisa Chen, Head of Product",
+        company: "DevDocs Platform"
+      }
+    },
+    
+    globalImpact: "Feature became a key differentiator. Competitors are now trying to copy it. Company added 2K new users in 3 months."
+  },
+
+  {
+    id: 4,
     title: "Regional Logistics Company Improves Delivery Efficiency",
     industry: "Logistics",
     client: "Regional Logistics Company",
     duration: "6 months",
-    image: "/abstract-technology-network-digital-innovation.jpg",
+    image: "/modern-technology-architecture-black-and-white.jpg",
     tags: ["Route Optimization", "GPS Tracking"],
     
     challenge: {
@@ -60,7 +219,7 @@ export const caseStudies = [
     industry: "Healthcare",
     client: "Regional Healthcare Clinic",
     duration: "4 months",
-    image: "/modern-office-workspace-innovation.jpg",
+    image: "/healthcare-ai-interface.jpg",
     tags: ["Telemedicine", "HIPAA Compliance"],
     
     challenge: {

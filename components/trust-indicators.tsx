@@ -9,7 +9,7 @@ export function TrustIndicators() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4 bg-blue-100 text-blue-800 px-4 py-1">
-            Industry Recognition
+            Technology Stack
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {contentConfig.trustedBy.title}
@@ -24,7 +24,7 @@ export function TrustIndicators() {
             <div className="w-full border-t border-gray-200" />
           </div>
           <div className="relative flex justify-center">
-            <span className="bg-white px-6 text-sm text-gray-500 font-medium">Partners & Clients</span>
+            <span className="bg-white px-6 text-sm text-gray-500 font-medium">Cloud & Enterprise Platforms</span>
           </div>
         </div>
         
@@ -54,7 +54,7 @@ export function TrustIndicators() {
             }
           `}</style>
           <p className="text-sm text-gray-500">
-            <span className="font-semibold text-gray-700">Delivering results for forward-thinking companies</span>
+            <span className="font-semibold text-gray-700">Certified experts in modern cloud technologies</span>
           </p>
         </div>
       </div>

@@ -45,15 +45,25 @@ export function ContactFormSection() {
 
   const onSubmit = async (data: ContactForm) => {
     try {
+      const formData = new FormData()
+      formData.append('name', data.name)
+      formData.append('email', data.email)
+      if (data.phone) formData.append('phone', data.phone)
+      if (data.company) formData.append('company', data.company)
+      formData.append('service', data.service)
+      if (data.budget) formData.append('budget', data.budget)
+      formData.append('message', data.message)
+      formData.append('newsletter', data.newsletter ? 'true' : 'false')
+      
+      // Add file if present
+      const fileInput = document.getElementById('attachment') as HTMLInputElement
+      if (fileInput?.files?.[0]) {
+        formData.append('attachment', fileInput.files[0])
+      }
+
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...data,
-          timestamp: new Date().toISOString(),
-        }),
+        body: formData,
       })
 
       if (response.ok) {
@@ -79,15 +89,15 @@ export function ContactFormSection() {
   }
 
   return (
-    <section id="contact" className="py-24 sm:py-32">
+    <section id="contact" className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
           {/* Left Column - Info */}
           <div>
-            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="mb-3 text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
               Let's Start a Conversation
             </h2>
-            <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
+            <p className="mb-6 text-base leading-relaxed text-muted-foreground">
               Ready to transform your business with cutting-edge technology? Fill out the form and our team will reach
               out within 24 hours to discuss your project.
             </p>
@@ -206,44 +216,52 @@ export function ContactFormSection() {
                 <Input id="company" name="company" placeholder="Your Company Inc." className="border border-gray-300 focus:border-primary" />
               </div>
 
-              {/* Service Interest */}
+              {/* Inquiry Type */}
               <div className="space-y-2">
                 <Label htmlFor="service">
-                  Service Interest <span className="text-destructive">*</span>
+                  I'm interested in <span className="text-destructive">*</span>
                 </Label>
                 <Select name="service" required>
                   <SelectTrigger id="service" className="border border-gray-300 focus:border-primary">
-                    <SelectValue placeholder="Select a service" />
+                    <SelectValue placeholder="Select inquiry type" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="ai-development">AI Product Development</SelectItem>
-                    <SelectItem value="cloud-infrastructure">Multi-Cloud Infrastructure</SelectItem>
-                    <SelectItem value="saas-development">SAAS Application Development</SelectItem>
-                    <SelectItem value="mainframe-modernization">Mainframes & Modernization</SelectItem>
-                    <SelectItem value="devops">DevOps & CI/CD</SelectItem>
-                    <SelectItem value="api-architecture">API First Architecture</SelectItem>
-                    <SelectItem value="digital-marketing">Digital Marketing</SelectItem>
-                    <SelectItem value="custom-erp">Custom ERP Solutions</SelectItem>
-                    <SelectItem value="manpower-augmentation">Manpower Augmentation</SelectItem>
-                    <SelectItem value="other">Other / Not Sure</SelectItem>
+                    <SelectItem value="investment-angel">💰 Investment Opportunity (Angel)</SelectItem>
+                    <SelectItem value="investment-vc">💼 Investment Opportunity (VC)</SelectItem>
+                    <SelectItem value="co-founder">🤝 Co-Founder Opportunity</SelectItem>
+                    <SelectItem value="incubator">🚀 Incubator/Accelerator Partnership</SelectItem>
+                    <SelectItem value="strategic-partner">🌐 Strategic Partnership</SelectItem>
+                    <SelectItem value="advisor">🎯 Advisor/Mentor Role</SelectItem>
+                    <SelectItem value="ai-development">🤖 AI Product Development</SelectItem>
+                    <SelectItem value="saas-development">💻 SAAS Application Development</SelectItem>
+                    <SelectItem value="cloud-infrastructure">☁️ Multi-Cloud Infrastructure</SelectItem>
+                    <SelectItem value="training">📚 Professional Training</SelectItem>
+                    <SelectItem value="hiring">👥 Hiring/Recruitment</SelectItem>
+                    <SelectItem value="other">❓ Other / General Inquiry</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
-              {/* Budget */}
+              {/* Budget/Investment */}
               <div className="space-y-2">
-                <Label htmlFor="budget">Project Budget</Label>
+                <Label htmlFor="budget">Budget / Investment Amount</Label>
                 <Select name="budget">
                   <SelectTrigger id="budget" className="border border-gray-300 focus:border-primary">
-                    <SelectValue placeholder="Select budget range" />
+                    <SelectValue placeholder="Select range (if applicable)" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="under-25k">Under $25,000</SelectItem>
-                    <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
-                    <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
-                    <SelectItem value="100k-250k">$100,000 - $250,000</SelectItem>
-                    <SelectItem value="250k-plus">$250,000+</SelectItem>
-                    <SelectItem value="not-sure">Not Sure Yet</SelectItem>
+                    <SelectItem value="angel-25k-50k">Angel: $25K - $50K</SelectItem>
+                    <SelectItem value="angel-50k-100k">Angel: $50K - $100K</SelectItem>
+                    <SelectItem value="angel-100k-plus">Angel: $100K+</SelectItem>
+                    <SelectItem value="vc-500k-1m">VC: $500K - $1M</SelectItem>
+                    <SelectItem value="vc-1m-2m">VC: $1M - $2M</SelectItem>
+                    <SelectItem value="vc-2m-plus">VC: $2M+</SelectItem>
+                    <SelectItem value="project-under-25k">Project: Under $25K</SelectItem>
+                    <SelectItem value="project-25k-50k">Project: $25K - $50K</SelectItem>
+                    <SelectItem value="project-50k-100k">Project: $50K - $100K</SelectItem>
+                    <SelectItem value="project-100k-plus">Project: $100K+</SelectItem>
+                    <SelectItem value="equity-only">Equity/Partnership Only</SelectItem>
+                    <SelectItem value="not-applicable">Not Applicable</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -251,16 +269,31 @@ export function ContactFormSection() {
               {/* Message */}
               <div className="space-y-2">
                 <Label htmlFor="message">
-                  Project Details <span className="text-destructive">*</span>
+                  Tell us more <span className="text-destructive">*</span>
                 </Label>
                 <Textarea
                   id="message"
-                  placeholder="Tell us about your project, goals, and timeline..."
+                  placeholder="For investors: Your background, investment thesis, ticket size&#10;For co-founders: Your expertise, location, availability&#10;For projects: Goals, timeline, requirements&#10;For partnerships: How we can collaborate"
                   rows={5}
                   className="border border-gray-300 focus:border-primary"
                   {...register("message")}
                 />
                 {errors.message && <p className="text-sm text-red-600">{errors.message.message}</p>}
+              </div>
+
+              {/* File Upload */}
+              <div className="space-y-2">
+                <Label htmlFor="attachment">
+                  Attachment (Optional)
+                </Label>
+                <Input 
+                  id="attachment" 
+                  name="attachment"
+                  type="file" 
+                  accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg"
+                  className="border border-gray-300 focus:border-primary file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" 
+                />
+                <p className="text-xs text-muted-foreground">Upload resume, pitch deck, portfolio, or any relevant document (Max 10MB)</p>
               </div>
 
               {/* Newsletter */}

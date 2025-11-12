@@ -6,6 +6,7 @@ export async function sendContactEmail(data: {
   service: string
   budget?: string
   message: string
+  attachment?: { name: string; size: number; type: string; buffer: Buffer }
 }) {
   if (!process.env.RESEND_API_KEY) {
     console.warn('RESEND_API_KEY not configured')
@@ -33,7 +34,16 @@ export async function sendContactEmail(data: {
           ${data.budget ? `<p><strong>Budget:</strong> ${data.budget}</p>` : ''}
           <p><strong>Message:</strong></p>
           <p>${data.message}</p>
+          ${data.attachment ? `<p><strong>Attachment:</strong> ${data.attachment.name} (${(data.attachment.size / 1024).toFixed(2)} KB)</p>` : ''}
         `,
+        ...(data.attachment && {
+          attachments: [
+            {
+              filename: data.attachment.name,
+              content: data.attachment.buffer.toString('base64'),
+            },
+          ],
+        }),
       }),
     })
 

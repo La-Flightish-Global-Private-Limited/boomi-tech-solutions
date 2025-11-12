@@ -2,18 +2,18 @@ import { contentConfig } from "@/lib/content-config"
 
 export function StatsSection() {
   return (
-    <section className="py-24 px-4 bg-gray-50">
+    <section className="py-16 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 text-balance">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-3 text-balance">
             Numbers That Define Excellence
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto text-pretty">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty">
             Our track record speaks for itself. Here's what we've achieved together with our clients.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {contentConfig.stats.map((stat, index) => (
             <div
               key={index}

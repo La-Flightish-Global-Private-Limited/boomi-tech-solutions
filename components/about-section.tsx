@@ -49,12 +49,12 @@ const achievements = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-24 sm:py-32 bg-muted/30">
+    <section id="about" className="py-16 sm:py-20 bg-muted/30">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Column */}
           <div>
-            <h2 className="mb-8 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-tight">
+            <h2 className="mb-6 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground leading-tight">
               Building trust through innovation
             </h2>
             <div className="space-y-6 text-lg leading-relaxed text-muted-foreground font-light">
@@ -108,7 +108,7 @@ export function AboutSection() {
           </div>
         </div>
 
-        <div className="mt-32">
+        <div className="mt-16">
           <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((value) => {
               const Icon = value.icon

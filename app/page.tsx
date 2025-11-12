@@ -28,6 +28,8 @@ const CaseStudiesSection = dynamic(() =>
 const StatsSection = dynamic(() => import("@/components/stats-section").then((mod) => mod.StatsSection))
 const FAQSection = dynamic(() => import("@/components/faq-section").then((mod) => mod.FAQSection))
 const NewsletterSection = dynamic(() => import("@/components/newsletter-section").then((mod) => mod.NewsletterSection))
+const TrainingSection = dynamic(() => import("@/components/training-section").then((mod) => mod.TrainingSection))
+const InvestorSection = dynamic(() => import("@/components/investor-section").then((mod) => mod.InvestorSection))
 const ScrollReveal = dynamic(() => import("@/components/scroll-reveal").then((mod) => mod.ScrollReveal))
 
 export default function Home() {
@@ -40,6 +42,9 @@ export default function Home() {
         <HeroSection />
         <ScrollReveal>
           <FlagshipProductSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <InvestorSection />
         </ScrollReveal>
         <ScrollReveal>
           <TrustIndicators />
@@ -60,6 +65,9 @@ export default function Home() {
           <AboutSection />
         </ScrollReveal>
         <ScrollReveal delay={150}>
+          <TrainingSection />
+        </ScrollReveal>
+        <ScrollReveal delay={100}>
           <FAQSection />
         </ScrollReveal>
         <ScrollReveal delay={100}>

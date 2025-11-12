@@ -59,14 +59,14 @@ const services = [
 
 export function ServicesOverview() {
   return (
-    <section id="services" className="bg-background py-24 sm:py-32 border-t border-border">
+    <section id="services" className="bg-background py-16 sm:py-20 border-t border-border">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="mb-20 max-w-3xl">
-          <h2 className="mb-6 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-tight">
+        <div className="mb-12 max-w-3xl">
+          <h2 className="mb-4 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground leading-tight">
             Enterprise solutions that scale with your vision
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed font-light">
+          <p className="text-lg text-muted-foreground leading-relaxed font-light">
             Comprehensive technology services designed to transform your business through innovation and expertise.
           </p>
         </div>

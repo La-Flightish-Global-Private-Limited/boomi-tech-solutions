@@ -4,16 +4,16 @@ import { contentConfig } from "@/lib/content-config"
 
 export function TestimonialsSection() {
   return (
-    <section className="py-24 px-4 bg-white">
+    <section className="py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 text-balance">Trusted by Industry Leaders</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto text-pretty">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-3 text-balance">Trusted by Industry Leaders</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty">
             Don't just take our word for it. Here's what our clients say about working with us.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {contentConfig.testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-white border-gray-200 p-8 hover:shadow-lg transition-all">
               <div className="flex gap-1 mb-4">

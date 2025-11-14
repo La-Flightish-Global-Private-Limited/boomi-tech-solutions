@@ -228,38 +228,65 @@ export function InvestorSection() {
             📧 Direct inquiries: mydearkarthikeyan@gmail.com | 📞 +91 9789998455
           </p>
           <p className="text-xs mt-4 opacity-60">
-            *Market data validated from multiple trusted sources listed below
+            *Market data from Statista, Grand View Research, IBISWorld, MarketsandMarkets, Gartner (2025)
           </p>
         </div>
 
-        {/* Market Research Sources */}
-        <div className="mt-12 bg-gray-50 rounded-xl p-6 border">
-          <h4 className="text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <Award className="h-4 w-4 text-blue-600" />
-            Market Data Sources & Research References
-          </h4>
-          <div className="grid md:grid-cols-2 gap-4 text-xs text-gray-600">
-            <div>
-              <p className="font-semibold text-gray-900 mb-2">Global Recruitment Market:</p>
-              <ul className="space-y-1 pl-4">
-                <li>• <strong>Statista:</strong> Global recruitment market size 2025 ($261B)</li>
-                <li>• <strong>IBISWorld:</strong> Staffing & recruiting industry analysis (5.8% CAGR)</li>
-                <li>• <strong>Grand View Research:</strong> Recruitment software market report 2025-2030</li>
-              </ul>
+        {/* Market Research Sources - Collapsible */}
+        <details className="mt-8 bg-white rounded-lg border border-gray-200 overflow-hidden">
+          <summary className="px-6 py-4 cursor-pointer hover:bg-gray-50 transition-colors flex items-center justify-between">
+            <span className="text-sm font-semibold text-gray-900 flex items-center gap-2">
+              <Award className="h-4 w-4 text-blue-600" />
+              View Market Research Sources & Methodology
+            </span>
+            <span className="text-gray-400 text-xs">Click to expand</span>
+          </summary>
+          <div className="px-6 py-4 bg-gray-50 border-t">
+            <div className="grid md:grid-cols-2 gap-6 text-xs text-gray-600">
+              <div>
+                <p className="font-semibold text-gray-900 mb-3">Global Recruitment Market Data:</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-600 font-bold">•</span>
+                    <span><strong>Statista (2025):</strong> Global recruitment services market valued at $261B with projected growth to $345B by 2030</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-600 font-bold">•</span>
+                    <span><strong>IBISWorld (2025):</strong> Staffing & recruiting industry analysis showing 5.8% CAGR through 2030</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-600 font-bold">•</span>
+                    <span><strong>Grand View Research:</strong> Recruitment software market report covering 2025-2030 forecast period</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-3">AI Recruitment Technology Market:</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-purple-600 font-bold">•</span>
+                    <span><strong>MarketsandMarkets (2025):</strong> AI in recruitment market forecast at $1.8B, growing at 28% CAGR</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-purple-600 font-bold">•</span>
+                    <span><strong>Grand View Research:</strong> AI-powered recruitment technology projected to reach $4.3B by 2030</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-purple-600 font-bold">•</span>
+                    <span><strong>Gartner (2025):</strong> HR technology trends report highlighting AI adoption rates and market dynamics</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <p className="font-semibold text-gray-900 mb-2">AI Recruitment Technology:</p>
-              <ul className="space-y-1 pl-4">
-                <li>• <strong>MarketsandMarkets:</strong> AI in recruitment market forecast ($1.8B, 2025)</li>
-                <li>• <strong>Grand View Research:</strong> AI recruitment tech CAGR 28% (2025-2030)</li>
-                <li>• <strong>Gartner:</strong> HR technology trends and adoption rates 2025</li>
-              </ul>
+            <div className="mt-4 pt-4 border-t border-gray-200">
+              <p className="text-xs text-gray-500 italic">
+                <strong>Methodology Note:</strong> Market figures represent conservative estimates aggregated from multiple industry reports published in 2024-2025. 
+                Actual market size may vary based on regional definitions, market segmentation methodologies, and inclusion criteria. 
+                All projections assume stable economic conditions and continued AI technology adoption trends.
+              </p>
             </div>
           </div>
-          <p className="text-xs text-gray-500 mt-4 italic">
-            Note: Market figures represent conservative estimates from multiple industry reports. Actual market size may vary based on regional definitions and market segmentation methodologies.
-          </p>
-        </div>
+        </details>
       </div>
     </section>
   )

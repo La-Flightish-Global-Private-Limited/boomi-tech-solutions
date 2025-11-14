@@ -2,8 +2,8 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Menu, X, ChevronDown, Sparkles, TrendingUp, Users, Rocket, DollarSign, Target, Globe, Lightbulb } from "lucide-react"
-import { useState } from "react"
+import { Menu, X, ChevronDown, Sparkles, TrendingUp, Users, Rocket } from "lucide-react"
+import { useState, useEffect } from "react"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,14 +13,30 @@ import {
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [announcementVisible, setAnnouncementVisible] = useState(true)
+
+  useEffect(() => {
+    const checkAnnouncement = () => {
+      const bar = document.getElementById('announcement-bar')
+      setAnnouncementVisible(!!bar)
+    }
+    
+    checkAnnouncement()
+    const interval = setInterval(checkAnnouncement, 100)
+    return () => clearInterval(interval)
+  }, [])
+
+  const navTop = announcementVisible ? 'top-[44px] sm:top-[52px]' : 'top-0'
+  const menuTop = announcementVisible ? 'top-[108px] sm:top-[116px]' : 'top-16'
 
   return (
-    <nav className="fixed top-[52px] left-0 right-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
+    <nav className={`fixed ${navTop} left-0 right-0 z-40 border-b border-border bg-background/95 backdrop-blur-md transition-all duration-300`}>
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-lg font-semibold tracking-tight text-foreground">
-            Boomi Tech Solutions
+          <Link href="/" className="text-base sm:text-lg font-semibold tracking-tight text-foreground whitespace-nowrap">
+            <span className="hidden xs:inline">Boomi Tech Solutions</span>
+            <span className="xs:hidden">Boomi Tech</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -67,14 +83,19 @@ export function Navigation() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
+          <button 
+            className="md:hidden p-2 -mr-2" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
+            aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
+          >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="fixed left-0 right-0 top-[116px] bg-background border-t border-border py-6 md:hidden shadow-lg max-h-[calc(100vh-116px)] overflow-y-auto">
+          <div className={`fixed left-0 right-0 ${menuTop} bg-background border-t border-border py-4 md:hidden shadow-lg transition-all duration-300`} style={{maxHeight: announcementVisible ? 'calc(100vh - 116px)' : 'calc(100vh - 64px)', overflowY: 'auto'}}>
             <div className="flex flex-col gap-6 px-6">
               <Link
                 href="/products/interview-cv"

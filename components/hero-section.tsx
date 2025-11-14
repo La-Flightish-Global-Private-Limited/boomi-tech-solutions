@@ -8,13 +8,31 @@ import Link from "next/link"
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
+  const [headerHeight, setHeaderHeight] = useState(116)
 
   useEffect(() => {
     setIsVisible(true)
+    
+    const updateHeight = () => {
+      const announcement = document.getElementById('announcement-bar')
+      const nav = document.querySelector('nav')
+      const announcementHeight = announcement?.offsetHeight || 0
+      const navHeight = nav?.offsetHeight || 64
+      setHeaderHeight(announcementHeight + navHeight)
+    }
+    
+    updateHeight()
+    const interval = setInterval(updateHeight, 100)
+    window.addEventListener('resize', updateHeight)
+    
+    return () => {
+      clearInterval(interval)
+      window.removeEventListener('resize', updateHeight)
+    }
   }, [])
 
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center bg-background pt-[116px]">
+    <section className="relative min-h-[70vh] flex items-center justify-center bg-background" style={{paddingTop: `${headerHeight}px`}}>
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 text-center">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6 text-balance leading-[1.2] text-foreground">
           Transform Your Business with{' '}

@@ -15,7 +15,7 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
+    <nav className="fixed top-[52px] left-0 right-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -74,7 +74,7 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="absolute left-0 right-0 top-16 bg-background border-t border-border py-6 md:hidden shadow-lg">
+          <div className="fixed left-0 right-0 top-[116px] bg-background border-t border-border py-6 md:hidden shadow-lg max-h-[calc(100vh-116px)] overflow-y-auto">
             <div className="flex flex-col gap-6 px-6">
               <Link
                 href="/products/interview-cv"

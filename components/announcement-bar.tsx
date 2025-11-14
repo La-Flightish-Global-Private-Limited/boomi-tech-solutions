@@ -14,10 +14,10 @@ export function AnnouncementBar() {
   }, [])
 
   if (!isVisible) return null
-  if (!mounted) return <div className="h-[52px]" />
+  if (!mounted) return null
 
   return (
-    <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 text-white">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 text-white">
       <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
           <div className="flex flex-1 items-center justify-center gap-3">

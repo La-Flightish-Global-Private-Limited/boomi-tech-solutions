@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { TrendingUp, Users, Globe, Rocket, Target, DollarSign, Lightbulb, Award, CheckCircle2 } from "lucide-react"
+import { TrendingUp, Users, Rocket, Target, DollarSign, Lightbulb, Award, CheckCircle2 } from "lucide-react"
 import Link from "next/link"
 
 export function InvestorSection() {
@@ -211,22 +211,49 @@ export function InvestorSection() {
         </div>
 
         {/* CTA */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">Let's Build the Future Together</h3>
-          <p className="text-lg mb-6 opacity-90">
-            Partner with us to revolutionize recruitment with AI. Schedule a call to discuss investment opportunities, co-founder roles, or strategic partnerships.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold">
-              <Link href="#contact">Schedule a Meeting</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-semibold">
-              <Link href="mailto:mydearkarthikeyan@gmail.com">Email Us Directly</Link>
-            </Button>
+        <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 rounded-2xl p-8 overflow-hidden">
+          <div className="absolute inset-0 bg-grid-white/5" />
+          <div className="relative">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <div className="h-2 w-2 bg-green-400 rounded-full animate-pulse" />
+              <span className="text-xs font-semibold text-white/80 uppercase tracking-wider">Pre-Seed Round Open</span>
+            </div>
+            <h3 className="text-3xl font-bold mb-3 text-white text-center">
+              Be Part of the AI Revolution in Recruitment
+            </h3>
+            <p className="text-lg mb-6 text-white/90 text-center max-w-2xl mx-auto">
+              Join visionary investors backing the next generation of career technology. Limited spots available for founding investors.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+              <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold shadow-xl">
+                <Link href="#contact">
+                  <Rocket className="mr-2 h-5 w-5" />
+                  Book Investor Call
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold">
+                <Link href="mailto:mydearkarthikeyan@gmail.com">
+                  Request Pitch Deck
+                </Link>
+              </Button>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-green-400" />
+                <span>Fast-track review for qualified investors</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-green-400" />
+                <span>NDA available upon request</span>
+              </div>
+            </div>
+            <div className="mt-6 pt-6 border-t border-white/20 text-center">
+              <p className="text-sm text-white/70">
+                📧 mydearkarthikeyan@gmail.com | 📞 +91 9789998455 | 🌐 US & India operations
+              </p>
+            </div>
           </div>
-          <p className="text-sm mt-6 opacity-75">
-            📧 Direct inquiries: mydearkarthikeyan@gmail.com | 📞 +91 9789998455
-          </p>
+        </div>
           <p className="text-xs mt-4 opacity-60">
             *Market data from Statista, Grand View Research, IBISWorld, MarketsandMarkets, Gartner (2025)
           </p>

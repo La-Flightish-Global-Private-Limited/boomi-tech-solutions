@@ -27,16 +27,15 @@ export function Navigation() {
   }, [])
 
   const navTop = announcementVisible ? 'top-[44px] sm:top-[52px]' : 'top-0'
-  const menuTop = announcementVisible ? 'top-[108px] sm:top-[116px]' : 'top-16'
+  const menuTop = announcementVisible ? 'top-[100px] sm:top-[108px]' : 'top-14'
 
   return (
     <nav className={`fixed ${navTop} left-0 right-0 z-40 border-b border-border bg-background/95 backdrop-blur-md transition-all duration-300`}>
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-14 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-base sm:text-lg font-semibold tracking-tight text-foreground whitespace-nowrap">
-            <span className="hidden xs:inline">Boomi Tech Solutions</span>
-            <span className="xs:hidden">Boomi Tech</span>
+          <Link href="/" className="text-sm sm:text-base font-semibold tracking-tight text-foreground">
+            Boomi Tech Solutions
           </Link>
 
           {/* Desktop Navigation */}
@@ -95,7 +94,7 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className={`fixed left-0 right-0 ${menuTop} bg-background border-t border-border py-4 md:hidden shadow-lg transition-all duration-300`} style={{maxHeight: announcementVisible ? 'calc(100vh - 116px)' : 'calc(100vh - 64px)', overflowY: 'auto'}}>
+          <div className={`fixed left-0 right-0 ${menuTop} bg-background border-t border-border py-4 md:hidden shadow-lg transition-all duration-300`} style={{maxHeight: announcementVisible ? 'calc(100vh - 108px)' : 'calc(100vh - 56px)', overflowY: 'auto'}}>
             <div className="flex flex-col gap-6 px-6">
               <Link
                 href="/products/interview-cv"

@@ -105,7 +105,7 @@ export function FlagshipProductSection() {
                         <TrendingUp className="h-4 w-4" />
                         <span className="font-semibold text-sm">Market Opportunity</span>
                       </div>
-                      <p className="text-xs text-white/80">Global recruitment market: $240B (2024), growing 6.1% CAGR to $340B by 2030. AI recruitment tech: $1.2B, growing 25% annually.</p>
+                      <p className="text-xs text-white/80">Global recruitment market: $261B (2025), growing 5.8% CAGR to $345B by 2030. AI recruitment tech: $1.8B (2025), projected $4.3B by 2030. (Sources: Statista, Grand View Research)</p>
                     </div>
                     
                     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">

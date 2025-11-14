@@ -20,26 +20,26 @@ export function InvestorSection() {
             Join Us in Building the Future of AI-Powered Recruitment
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Pre-seed investment opportunity in a high-growth AI SaaS platform targeting the $200B+ global recruitment market
+            Pre-seed investment opportunity in an AI-powered career platform targeting the $240B global recruitment market
           </p>
         </div>
 
         {/* Key Metrics */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           <Card className="p-6 text-center border-2 hover:border-blue-300 transition-all">
-            <div className="text-4xl font-bold text-blue-600 mb-2">$200B+</div>
+            <div className="text-4xl font-bold text-blue-600 mb-2">$240B</div>
             <div className="text-sm font-semibold text-gray-900">Total Addressable Market</div>
-            <div className="text-xs text-gray-600 mt-1">Global recruitment industry 2025</div>
+            <div className="text-xs text-gray-600 mt-1">Global recruitment industry 2024</div>
           </Card>
           <Card className="p-6 text-center border-2 hover:border-purple-300 transition-all">
-            <div className="text-4xl font-bold text-purple-600 mb-2">7.2%</div>
+            <div className="text-4xl font-bold text-purple-600 mb-2">6.1%</div>
             <div className="text-sm font-semibold text-gray-900">Market CAGR</div>
-            <div className="text-xs text-gray-600 mt-1">2025-2030 projected growth</div>
+            <div className="text-xs text-gray-600 mt-1">2024-2030 projected growth</div>
           </Card>
           <Card className="p-6 text-center border-2 hover:border-green-300 transition-all">
-            <div className="text-4xl font-bold text-green-600 mb-2">$10B</div>
+            <div className="text-4xl font-bold text-green-600 mb-2">$1.2B</div>
             <div className="text-sm font-semibold text-gray-900">AI Recruitment Tech</div>
-            <div className="text-xs text-gray-600 mt-1">Market size by 2030</div>
+            <div className="text-xs text-gray-600 mt-1">Market size 2024 (growing 25% YoY)</div>
           </Card>
           <Card className="p-6 text-center border-2 hover:border-orange-300 transition-all">
             <div className="text-4xl font-bold text-orange-600 mb-2">Q1 2026</div>
@@ -62,11 +62,11 @@ export function InvestorSection() {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <span>$200B+ global recruitment market with 7.2% CAGR</span>
+                  <span>$240B global recruitment market growing at 6.1% CAGR to $340B by 2030</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <span>AI recruitment tech growing from $3.2B to $10B by 2030</span>
+                  <span>AI recruitment tech at $1.2B (2024), growing 25% annually</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
@@ -135,11 +135,11 @@ export function InvestorSection() {
               <ul className="space-y-3 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="font-semibold min-w-[120px]">Angel Investors:</span>
-                  <span>$25K-$100K tickets, hands-on mentorship, US market expertise</span>
+                  <span>$10K-$50K tickets, hands-on mentorship, US market expertise</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="font-semibold min-w-[120px]">Venture Capital:</span>
-                  <span>Pre-seed/seed stage VCs focused on AI/SaaS, $500K-$2M rounds</span>
+                  <span>Pre-seed/seed stage VCs focused on AI/SaaS, $250K-$1M rounds</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="font-semibold min-w-[120px]">Incubators:</span>
@@ -180,32 +180,32 @@ export function InvestorSection() {
 
         {/* Use of Funds */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Use of Funds (Pre-Seed Target: $500K)</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Use of Funds (Pre-Seed Target: $250K)</h3>
           <div className="grid md:grid-cols-5 gap-4">
             <Card className="p-4 text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">35%</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">40%</div>
               <div className="text-sm font-semibold text-gray-900 mb-1">Product Development</div>
-              <div className="text-xs text-gray-600">AI features, platform scaling</div>
+              <div className="text-xs text-gray-600">$100K: AI features, beta launch</div>
             </Card>
             <Card className="p-4 text-center">
               <div className="text-3xl font-bold text-purple-600 mb-2">25%</div>
-              <div className="text-sm font-semibold text-gray-900 mb-1">Marketing & Sales</div>
-              <div className="text-xs text-gray-600">User acquisition, B2B outreach</div>
+              <div className="text-sm font-semibold text-gray-900 mb-1">Marketing & Growth</div>
+              <div className="text-xs text-gray-600">$62.5K: User acquisition, content</div>
             </Card>
             <Card className="p-4 text-center">
               <div className="text-3xl font-bold text-green-600 mb-2">20%</div>
-              <div className="text-sm font-semibold text-gray-900 mb-1">Team Expansion</div>
-              <div className="text-xs text-gray-600">Key hires, co-founder equity</div>
+              <div className="text-sm font-semibold text-gray-900 mb-1">Infrastructure</div>
+              <div className="text-xs text-gray-600">$50K: Cloud, APIs, security</div>
             </Card>
             <Card className="p-4 text-center">
-              <div className="text-3xl font-bold text-orange-600 mb-2">15%</div>
+              <div className="text-3xl font-bold text-orange-600 mb-2">10%</div>
               <div className="text-sm font-semibold text-gray-900 mb-1">Operations</div>
-              <div className="text-xs text-gray-600">Infrastructure, legal, admin</div>
+              <div className="text-xs text-gray-600">$25K: Legal, compliance, admin</div>
             </Card>
             <Card className="p-4 text-center">
               <div className="text-3xl font-bold text-red-600 mb-2">5%</div>
-              <div className="text-sm font-semibold text-gray-900 mb-1">Runway Buffer</div>
-              <div className="text-xs text-gray-600">18-month runway target</div>
+              <div className="text-sm font-semibold text-gray-900 mb-1">Contingency</div>
+              <div className="text-xs text-gray-600">$12.5K: 12-month runway</div>
             </Card>
           </div>
         </div>

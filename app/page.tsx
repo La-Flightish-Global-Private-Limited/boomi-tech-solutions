@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer"
 import { StructuredData } from "@/components/structured-data"
 import { AnnouncementBar } from "@/components/announcement-bar"
 import { FlagshipProductSection } from "@/components/flagship-product-section"
+import { FloatingWaitlistWidget } from "@/components/floating-waitlist-widget"
 import dynamic from "next/dynamic"
 
 const ServicesOverview = dynamic(() => import("@/components/services-overview").then((mod) => mod.ServicesOverview), {
@@ -38,6 +39,7 @@ export default function Home() {
       <StructuredData />
       <AnnouncementBar />
       <Navigation />
+      <FloatingWaitlistWidget />
       <main id="main-content">
         <HeroSection />
         <ScrollReveal>

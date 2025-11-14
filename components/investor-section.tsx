@@ -210,54 +210,146 @@ export function InvestorSection() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 rounded-2xl p-8 overflow-hidden">
-          <div className="absolute inset-0 bg-grid-white/5" />
-          <div className="relative">
-            <div className="flex items-center justify-center gap-2 mb-3">
-              <div className="h-2 w-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-xs font-semibold text-white/80 uppercase tracking-wider">Pre-Seed Round Open</span>
-            </div>
-            <h3 className="text-3xl font-bold mb-3 text-white text-center">
-              Be Part of the AI Revolution in Recruitment
-            </h3>
-            <p className="text-lg mb-6 text-white/90 text-center max-w-2xl mx-auto">
-              Join visionary investors backing the next generation of career technology. Limited spots available for founding investors.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-              <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold shadow-xl">
-                <Link href="#contact">
-                  <Rocket className="mr-2 h-5 w-5" />
-                  Book Investor Call
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold">
-                <Link href="mailto:mydearkarthikeyan@gmail.com">
-                  Request Pitch Deck
-                </Link>
-              </Button>
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-4 w-4 text-green-400" />
-                <span>Fast-track review for qualified investors</span>
+        {/* CTA - Innovative Multi-Tier Approach */}
+        <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 rounded-3xl overflow-hidden">
+          {/* Animated background */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 animate-pulse" />
+          </div>
+          
+          <div className="relative p-8 md:p-12">
+            {/* Status Badge */}
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="relative">
+                <div className="h-3 w-3 bg-green-400 rounded-full animate-ping absolute" />
+                <div className="h-3 w-3 bg-green-400 rounded-full" />
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-4 w-4 text-green-400" />
-                <span>NDA available upon request</span>
+              <span className="text-sm font-bold text-green-400 uppercase tracking-widest">Actively Fundraising</span>
+              <Badge className="bg-red-500 text-white text-xs px-2 py-0.5">Limited Slots</Badge>
+            </div>
+
+            {/* Main Headline */}
+            <div className="text-center mb-8">
+              <h3 className="text-4xl md:text-5xl font-black text-white mb-4 leading-tight">
+                Don't Miss the Next <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">$1B</span> HR Tech Unicorn
+              </h3>
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                Early investors in LinkedIn, Indeed, and ZipRecruiter saw 100x+ returns. Interview.CV is positioned to be the next category leader.
+              </p>
+            </div>
+
+            {/* Social Proof Ticker */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-8 border border-white/20">
+              <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white">
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="h-5 w-5 text-green-400" />
+                  <span><strong>100+</strong> waitlist signups</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Users className="h-5 w-5 text-blue-400" />
+                  <span><strong>3</strong> investor meetings scheduled</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Target className="h-5 w-5 text-purple-400" />
+                  <span><strong>$261B</strong> market opportunity</span>
+                </div>
               </div>
             </div>
-            <div className="mt-6 pt-6 border-t border-white/20 text-center">
-              <p className="text-sm text-white/70">
-                📧 mydearkarthikeyan@gmail.com | 📞 +91 9789998455 | 🌐 US & India operations
+
+            {/* Three-Tier Engagement Options */}
+            <div className="grid md:grid-cols-3 gap-4 mb-8">
+              {/* Tier 1: Learn More */}
+              <Card className="bg-white/5 backdrop-blur-sm border-white/20 hover:bg-white/10 transition-all p-6">
+                <div className="text-center">
+                  <div className="text-3xl mb-2">📊</div>
+                  <h4 className="font-bold text-white mb-2">Explore Opportunity</h4>
+                  <p className="text-xs text-blue-200 mb-4">Get pitch deck, financials, and market analysis</p>
+                  <Button asChild className="w-full bg-white/10 text-white border border-white/30 hover:bg-white hover:text-blue-900 font-semibold">
+                    <Link href="mailto:mydearkarthikeyan@gmail.com?subject=Request Interview.CV Pitch Deck">
+                      Request Materials
+                    </Link>
+                  </Button>
+                </div>
+              </Card>
+
+              {/* Tier 2: Schedule Call */}
+              <Card className="bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-yellow-400 hover:shadow-2xl transition-all p-6 relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <Badge className="bg-yellow-400 text-black text-xs font-bold px-3">MOST POPULAR</Badge>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl mb-2">🚀</div>
+                  <h4 className="font-bold text-white mb-2">Book Investor Call</h4>
+                  <p className="text-xs text-white/90 mb-4">30-min deep dive with founder + Q&A</p>
+                  <Button asChild size="lg" className="w-full bg-white text-blue-600 hover:bg-yellow-400 hover:text-black font-bold">
+                    <Link href="#contact">
+                      Schedule Now
+                    </Link>
+                  </Button>
+                </div>
+              </Card>
+
+              {/* Tier 3: Fast Track */}
+              <Card className="bg-white/5 backdrop-blur-sm border-white/20 hover:bg-white/10 transition-all p-6">
+                <div className="text-center">
+                  <div className="text-3xl mb-2">⚡</div>
+                  <h4 className="font-bold text-white mb-2">Fast-Track Review</h4>
+                  <p className="text-xs text-blue-200 mb-4">For qualified investors ready to commit</p>
+                  <Button asChild className="w-full bg-white/10 text-white border border-white/30 hover:bg-white hover:text-blue-900 font-semibold">
+                    <Link href="mailto:mydearkarthikeyan@gmail.com?subject=Fast-Track Investment - Interview.CV">
+                      Express Interest
+                    </Link>
+                  </Button>
+                </div>
+              </Card>
+            </div>
+
+            {/* Urgency + Trust Signals */}
+            <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-4 mb-6">
+              <div className="flex items-start gap-3">
+                <div className="text-2xl">⏰</div>
+                <div>
+                  <p className="text-sm font-bold text-red-300 mb-1">Pre-Seed Round Closing Soon</p>
+                  <p className="text-xs text-red-200">We're targeting to close our $250K pre-seed by end of Q1 2026. Early investors get preferred terms and advisory board seats.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-white/60 mb-6">
+              <div className="flex items-center gap-1">
+                <CheckCircle2 className="h-3 w-3 text-green-400" />
+                <span>NDA Protected</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <CheckCircle2 className="h-3 w-3 text-green-400" />
+                <span>SAFE/Convertible Note</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <CheckCircle2 className="h-3 w-3 text-green-400" />
+                <span>Wyoming LLC (C-Corp Conversion Ready)</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <CheckCircle2 className="h-3 w-3 text-green-400" />
+                <span>US & India Operations</span>
+              </div>
+            </div>
+
+            {/* Contact Footer */}
+            <div className="text-center pt-6 border-t border-white/10">
+              <p className="text-sm text-white/80 mb-2">
+                <strong>Direct Line to Founder:</strong> Karthikeyan Veeran
+              </p>
+              <p className="text-xs text-white/60">
+                📧 mydearkarthikeyan@gmail.com | 📞 +91 9789998455 | 💼 <a href="https://www.linkedin.com/in/karthikeyanvee/" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">LinkedIn Profile</a>
               </p>
             </div>
           </div>
         </div>
-          <p className="text-xs mt-4 opacity-60">
-            *Market data from Statista, Grand View Research, IBISWorld, MarketsandMarkets, Gartner (2025)
-          </p>
-        </div>
+
+        <p className="text-center text-xs mt-4 text-gray-500">
+          *Market data from Statista, Grand View Research, IBISWorld, MarketsandMarkets, Gartner (2025)
+        </p>
 
         {/* Market Research Sources - Collapsible */}
         <details className="mt-8 bg-white rounded-lg border border-gray-200 overflow-hidden">

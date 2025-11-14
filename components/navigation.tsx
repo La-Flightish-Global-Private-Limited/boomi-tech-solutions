@@ -74,8 +74,8 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="border-t border-border py-6 md:hidden">
-            <div className="flex flex-col gap-6">
+          <div className="absolute left-0 right-0 top-16 bg-background border-t border-border py-6 md:hidden shadow-lg">
+            <div className="flex flex-col gap-6 px-6">
               <Link
                 href="/products/interview-cv"
                 className="text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 flex items-center gap-2"
